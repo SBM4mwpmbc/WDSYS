@@ -1,0 +1,496 @@
+newmtl Lhandjoint1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Rhandjoint1_diff.png
+map_Kd Rhandjoint1_diff.png
+map_d Rhandjoint1_diff.png
+
+map_Bump Rhandjoint1_nmap.png
+
+map_Ns Rhandjoint1_spec.png
+
+map_Ke Lhandjoint1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Wdlogo1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Wdlogo1_diff.png
+map_Kd Wdlogo1_diff.png
+map_d Wdlogo1_diff.png
+
+rbx_doublesided 1
+
+newmtl PantsLeft1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000273793 0.000273793 0.000273793 
+
+d 1
+
+Ns 0
+
+map_Ka PantsLeft1_diff.png
+map_Kd PantsLeft1_diff.png
+map_d PantsLeft1_diff.png
+
+map_Bump PantsLeft1_nmap.png
+
+map_Ns PantsLeft1_spec.png
+
+newmtl Hair1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Hair1_diff.png
+map_Kd Hair1_diff.png
+map_d Hair1_diff.png
+
+map_Bump Hair1_nmap.png
+
+map_Ns Hair1_spec.png
+
+map_Ke Hair1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Rhandlight1Mtl
+Material Color
+Ka 0.121986 0.0143105 0.645555
+Kd 0.121986 0.0143105 0.645555
+Ks 0.0110026 0.00129075 0.0582266 
+
+d 1
+
+Ns 0
+
+rbx_doublesided 1
+
+newmtl Pom1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 7.09834e-05 7.09834e-05 7.09834e-05 
+
+d 1
+
+Ns 0
+
+map_Ka Pom1_diff.png
+map_Kd Pom1_diff.png
+map_d Pom1_diff.png
+
+map_Bump Pom1_nmap.png
+
+map_Ns Pom1_spec.png
+
+newmtl MilkyWay21Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka MilkyWay21_diff.png
+map_Kd MilkyWay21_diff.png
+map_d MilkyWay21_diff.png
+
+rbx_doublesided 1
+
+newmtl Workerdronebody1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Workerdronebody1_diff.png
+map_Kd Workerdronebody1_diff.png
+map_d Workerdronebody1_diff.png
+
+rbx_doublesided 1
+
+newmtl Beanie1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Beanie1_diff.png
+map_Kd Beanie1_diff.png
+map_d Beanie1_diff.png
+
+map_Bump Beanie1_nmap.png
+
+map_Ns Beanie1_spec.png
+
+map_Ke Beanie1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Workerdronebody51Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Workerdronebody51_diff.png
+map_Kd Workerdronebody51_diff.png
+map_d Workerdronebody51_diff.png
+
+map_Bump Workerdronebody51_nmap.png
+
+rbx_doublesided 1
+
+newmtl Jacketbutton1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000273793 0.000273793 0.000273793 
+
+d 1
+
+Ns 0
+
+map_Ka PantsLeft1_diff.png
+map_Kd PantsLeft1_diff.png
+map_d PantsLeft1_diff.png
+
+map_Bump PantsLeft1_nmap.png
+
+map_Ns PantsLeft1_spec.png
+
+rbx_doublesided 1
+
+newmtl Workerdronebody21Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Workerdronebody21_diff.png
+map_Kd Workerdronebody21_diff.png
+map_d Workerdronebody21_diff.png
+
+map_Bump Workerdronebody21_nmap.png
+
+map_Ns Workerdronebody21_spec.png
+
+map_Ke Workerdronebody21_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Workerdronebody31Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Rhandjoint1_diff.png
+map_Kd Rhandjoint1_diff.png
+map_d Rhandjoint1_diff.png
+
+map_Bump Rhandjoint1_nmap.png
+
+map_Ns Rhandjoint1_spec.png
+
+map_Ke Workerdronebody31_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Jacket1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Jacket1_diff.png
+map_Kd Jacket1_diff.png
+map_d Jacket1_diff.png
+
+map_Bump Jacket1_nmap.png
+
+map_Ns Jacket1_spec.png
+
+map_Ke Jacket1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Shirtsocks1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Shirtsocks1_diff.png
+map_Kd Shirtsocks1_diff.png
+map_d Shirtsocks1_diff.png
+
+map_Bump Shirtsocks1_nmap.png
+
+map_Ns Shirtsocks1_spec.png
+
+map_Ke Shirtsocks1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Rhandjoint1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Rhandjoint1_diff.png
+map_Kd Rhandjoint1_diff.png
+map_d Rhandjoint1_diff.png
+
+map_Bump Rhandjoint1_nmap.png
+
+map_Ns Rhandjoint1_spec.png
+
+map_Ke Rhandjoint1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Rhand1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Workerdronebody21_diff.png
+map_Kd Workerdronebody21_diff.png
+map_d Workerdronebody21_diff.png
+
+map_Bump Workerdronebody21_nmap.png
+
+map_Ns Workerdronebody21_spec.png
+
+map_Ke Rhand1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Lhand1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Workerdronebody21_diff.png
+map_Kd Workerdronebody21_diff.png
+map_d Workerdronebody21_diff.png
+
+map_Bump Workerdronebody21_nmap.png
+
+map_Ns Workerdronebody21_spec.png
+
+map_Ke Lhand1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Dronehead1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Workerdronebody21_diff.png
+map_Kd Workerdronebody21_diff.png
+map_d Workerdronebody21_diff.png
+
+map_Bump Workerdronebody21_nmap.png
+
+map_Ns Workerdronebody21_spec.png
+
+map_Ke Dronehead1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Screen1Mtl
+Material Color
+Ka 0.00258583 0.00258583 0.00258583
+Kd 0.00258583 0.00258583 0.00258583
+Ks 0.000233231 0.000233231 0.000233231 
+
+d 1
+
+Ns 0
+
+rbx_doublesided 1
+
+newmtl Cabinfevernecklace1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Cabinfevernecklace1_diff.png
+map_Kd Cabinfevernecklace1_diff.png
+map_d Cabinfevernecklace1_diff.png
+
+map_Bump Cabinfevernecklace1_nmap.png
+
+map_Ns Cabinfevernecklace1_spec.png
+
+map_Ke Cabinfevernecklace1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Boots21Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Boots21_diff.png
+map_Kd Boots21_diff.png
+map_d Boots21_diff.png
+
+map_Bump Boots21_nmap.png
+
+map_Ns Boots21_spec.png
+
+map_Ke Boots21_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
+newmtl Boots1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ke 1 1 1
+Ks 0.0322335 0.0318 0.03311 
+
+d 1
+
+Ns 255
+
+map_Ka Boots21_diff.png
+map_Kd Boots21_diff.png
+map_d Boots21_diff.png
+
+map_Bump Boots21_nmap.png
+
+map_Ns Boots1_spec.png
+
+map_Ke Boots1_emap.png
+
+rbx_doublesided 1
+
+rbx_alphamode overlay
+
