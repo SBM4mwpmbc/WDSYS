@@ -1,4 +1,4 @@
-Welcome to the Worker Drone System Version 1, the robot that will most likely change the world!
+Welcome to the Worker Drone System Version 1, a somewhat replica of the Worker Drone in MD!
 
 Worker drone thingy: []
 
@@ -30,6 +30,6 @@ Steps to customize:
 
 3. If you are doing the gui, carefully move the preset faces to the resources folder in WDSYS\gui\face.
 
-4. If you are doing PAPIK (personality API key), carefully replace the c_ai_talk.exe with your new one.
+4. If you are doing PAPIK (personality API key), carefully replace the c_ai_talk.exe in WDSYS\api_sys\char_mind (not the resources folder!) 
 
 5. There ya go! once you are ready, go to the second step in "Steps to download"
