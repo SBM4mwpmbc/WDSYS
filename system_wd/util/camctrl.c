@@ -84,5 +84,109 @@ void camctrl_shutdown(void)
 
 unsigned long long camctrl_get_frame_size(void)
 {
-    // unfinished
+    unsigned long long bytes_per_pixel;
+
+    if (!g_camera.initialized)
+    {
+        return 0;
+    }
+
+    switch (g_camera.pixel_format)
+    {
+        case CAMCTRL_PIXEL_RGB24:
+            bytes_per_pixel = 3;
+            break;
+        
+            case CAMCTRL_PIXEL_RGBA32:
+            bytes_per_pixel = 4;
+            break;
+        
+            case CAMCTRL_PIXEL_GRAY8:
+            bytes_per_pixel = 1;
+            break;
+        
+        default:
+            return 0;
+    }
+
+    return (unsigned long long)g_camera.width * g_camera.height * bytes_per_pixel;
+
 }
+
+// submit a captured frame. soon a future driver can do the camera data.
+
+int camctrl_submit_frame(
+    const unsigned char* data,
+    unsigned long long data_size
+)
+{
+    unsigned long long required_size;
+
+    if (!g_camera.initialized)
+    {
+        return CAMCTRL_NOT_INITIALIZED;
+    }
+
+    if (data == NULL)
+    {
+        return CAMCTRL_ERROR;
+    }
+
+    required_size = camctrl_get_frame_size();
+    
+    if (data_size != required_size)
+    {
+        return CAMCTRL_ERROR;
+    }
+
+    if (g_camera.current_frame.data == NULL)
+    {
+        return CAMCTRL_ERROR;
+    }
+
+    memcpy(g_camera.current_frame.data, data, required_size);
+
+    g_camera.current_frame.width = g_camera.width;
+    g_camera.current_frame.height = g_camera.height;
+    g_camera.current_frame.pixel_format = g_camera.pixel_format;
+    g_camera.current_frame.frame_size = required_size;
+
+    g_camera.frames_captured++;
+
+    return CAMCTRL_OK;
+}
+
+int camctrl_get_frame_info(
+    unsigned int *width,
+    unsigned int *height,
+    unsigned int *pixel_format,
+    unsigned long long *frame_size
+)
+{
+    if (!g_camera.initialized)
+    {
+        return CAMCTRL_NOT_INITIALIZED;
+    }
+
+    if (g_camera.current_frame.data == NULL)
+    {
+        return CAMCTRL_ERROR;
+    }
+
+    if (width != NULL)
+        *width = g_camera.current_frame.width;
+
+    if (height != NULL)
+        *height = g_camera.current_frame.height;
+
+    if (pixel_format != NULL)
+        *pixel_format = g_camera.current_frame.pixel_format;
+
+    if (frame_size != NULL)
+        *frame_size = g_camera.current_frame.frame_size;
+
+    return CAMCTRL_OK;
+}
+
+int camctrl_copy_frame(
+    // unfinished
