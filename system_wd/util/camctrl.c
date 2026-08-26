@@ -1,192 +1,300 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
-#define CAMCTRL_VERSION "1.0"
+#define CAMCTRL_DEFAULT_WIDTH       1280
+#define CAMCTRL_DEFAULT_HEIGHT       720
+#define CAMCTRL_DEFAULT_BPP            24
 
-#define CAMCTRL_OK                0
-#define CAMCTRL_ERROR            -1
-#define CAMCTRL_NOT_INITIALIZED  -2
-#define CAMCTRL_ALREADY_RUNNING  -3
+#define CAMCTRL_SUCCESS                0
+#define CAMCTRL_NOT_INITIALIZED       -1
+#define CAMCTRL_ALREADY_INITIALIZED   -2
+#define CAMCTRL_INVALID_ARGUMENT      -3
+#define CAMCTRL_MEMORY_ERROR          -4
+#define CAMCTRL_BUFFER_TOO_SMALL      -5
+#define CAMCTRL_NO_FRAME              -6
+#define CAMCTRL_GENERAL_ERROR         -7
 
-#define CAMCTRL_PIXEL_RGB24      1
-#define CAMCTRL_PIXEL_RGBA32     2
-#define CAMCTRL_PIXEL_GRAY8      3
 
-typedef struct
-{
-    unsigned int width;
-    unsigned int height;
-    unsigned int pixel_format;
-    unsigned long long frame_size;
-    unsigned char *data;
-} CAMCTRL_FRAME;
+static int g_initialized = 0;
 
-typedef struct
-{
-    int initialized;
-    int running;
-    
-    unsigned int width;
-    unsigned int height;
-    unsigned int pixel_format;
+static unsigned int g_width = 0;
+static unsigned int g_height = 0;
+static unsigned int g_bpp = 0;
 
-    unsigned long long frames_captured;
+static unsigned long g_frame_size = 0;
 
-    CAMCTRL_FRAME current_frame;
-} CAMCTRL_STATE;
+static unsigned char* g_frame_buffer = NULL;
 
-static CAMCTRL_STATE g_camera;
+static unsigned long g_frame_number = 0;
 
-int camctrl_initialize(
+static int camctrl_calculate_frame_size(
     unsigned int width,
     unsigned int height,
-    unsigned int pixel_format
+    unsigned int bpp,
+    unsigned long* size
 )
 {
-    if (g_camera.initialized)
+    unsigned long bytes_per_pixel;
+    unsigned long pixels;
+
+    if (size == NULL) 
     {
-        return CAMCTRL_ALREADY_RUNNING;
+        return CAMCTRL_INVALID_ARGUMENT;
     }
 
-    if (width == 0 || height == 0)
+    if (width == 0 || height == 0 || bpp == 0) 
     {
-        return CAMCTRL_ERROR;
+        return CAMCTRL_INVALID_ARGUMENT;
     }
 
-    if (pixel_format != CAMCTRL_PIXEL_RGB24 && pixel_format != CAMCTRL_PIXEL_RGBA32 && pixel_format != CAMCTRL_PIXEL_GRAY8)
+    if ((bpp % 8) != 0)
     {
-        return CAMCTRL_ERROR;
+        return CAMCTRL_INVALID_ARGUMENT;
     }
 
-    memset(&g_camera, 0, sizeof(g_camera));
+    bytes_per_pixel = bpp / 8;
 
-    g_camera.width = width;
-    g_camera.height = height;
-    g_camera.pixel_format = pixel_format;
+    if ((unsigned long)width > ULONG_MAX / (unsigned long)height)
+    {
+        return CAMCTRL_GENERAL_ERROR;
+    }
 
-    g_camera.initialized = 1;
-    g_camera.running = 1;
+    pixels = (unsigned long)width * (unsigned long)height;
 
-    return CAMCTRL_OK;
+    if (pixels > ULONG_MAX / bytes_per_pixel)
+    {
+        return CAMCTRL_GENERAL_ERROR;
+    }
+
+    *size = pixels * bytes_per_pixel;
+
+    return CAMCTRL_SUCCESS;
 }
 
-void camctrl_shutdown(void)
-{
-    if (g_camera.current_frame.data != NULL)
-    {
-        free(g_camera.current_frame.data);
-        g_camera.current_frame.data = NULL;
-    }
-
-    memset(&g_camera, 0, sizeof(g_camera));
-}
-
-unsigned long long camctrl_get_frame_size(void)
-{
-    unsigned long long bytes_per_pixel;
-
-    if (!g_camera.initialized)
-    {
-        return 0;
-    }
-
-    switch (g_camera.pixel_format)
-    {
-        case CAMCTRL_PIXEL_RGB24:
-            bytes_per_pixel = 3;
-            break;
-        
-            case CAMCTRL_PIXEL_RGBA32:
-            bytes_per_pixel = 4;
-            break;
-        
-            case CAMCTRL_PIXEL_GRAY8:
-            bytes_per_pixel = 1;
-            break;
-        
-        default:
-            return 0;
-    }
-
-    return (unsigned long long)g_camera.width * g_camera.height * bytes_per_pixel;
-
-}
-
-// submit a captured frame. soon a future driver can do the camera data.
-
-int camctrl_submit_frame(
-    const unsigned char* data,
-    unsigned long long data_size
+int camctrl_int(
+    unsigned int width,
+    unsigned int height,
+    unsigned int bpp
 )
 {
-    unsigned long long required_size;
+    unsigned long frame_size;
+    unsigned char* buffer;
 
-    if (!g_camera.initialized)
+    if (g_initialized)
+    {
+        return CAMCTRL_ALREADY_INITIALIZED;
+    }
+
+    if (camctrl_calculate_frame_size(width, height, bpp, &frame_size) != CAMCTRL_SUCCESS)
+    {
+        return CAMCTRL_INVALID_ARGUMENT;
+    }
+
+    buffer = (unsigned char*)malloc(frame_size);
+
+    if (buffer == NULL)
+    {
+        return CAMCTRL_MEMORY_ERROR;
+    }
+
+    memset(buffer, 0, frame_size);
+
+    g_width = width;
+    g_height = height;
+    g_bpp = bpp;
+
+    g_frame_size = frame_size;
+
+    g_frame_buffer = buffer;
+
+    g_frame_number = 0;
+
+    g_initialized = 1;
+
+    return CAMCTRL_SUCCESS;
+}
+
+int camctrl_shutdown(void)
+{
+    if (!g_initialized)
     {
         return CAMCTRL_NOT_INITIALIZED;
     }
 
-    if (data == NULL)
+    if (g_frame_buffer != NULL)
     {
-        return CAMCTRL_ERROR;
+        free(g_frame_buffer);
+        g_frame_buffer = NULL;
     }
 
-    required_size = camctrl_get_frame_size();
-    
-    if (data_size != required_size)
+    g_width = 0;
+    g_height = 0;
+    g_bpp = 0;
+
+    g_frame_size = 0;
+    g_frame_number = 0;
+
+    g_initialized = 0;
+
+    return CAMCTRL_SUCCESS;
+}
+
+int camctrl_submit_frame(
+    const unsigned char* frame,
+    unsigned long frame_size
+)
+{
+    if (!g_initialized)
     {
-        return CAMCTRL_ERROR;
+        return CAMCTRL_NOT_INITIALIZED;
     }
 
-    if (g_camera.current_frame.data == NULL)
+    if (frame == NULL)
     {
-        return CAMCTRL_ERROR;
+        return CAMCTRL_INVALID_ARGUMENT;
     }
 
-    memcpy(g_camera.current_frame.data, data, required_size);
+    if (frame_size != g_frame_size)
+    {
+        return CAMCTRL_INVALID_ARGUMENT;
+    }
 
-    g_camera.current_frame.width = g_camera.width;
-    g_camera.current_frame.height = g_camera.height;
-    g_camera.current_frame.pixel_format = g_camera.pixel_format;
-    g_camera.current_frame.frame_size = required_size;
+    memcpy(g_frame_buffer, frame, g_frame_size);
 
-    g_camera.frames_captured++;
+    g_frame_number++;
 
-    return CAMCTRL_OK;
+    return CAMCTRL_SUCCESS;
 }
 
 int camctrl_get_frame_info(
-    unsigned int *width,
-    unsigned int *height,
-    unsigned int *pixel_format,
-    unsigned long long *frame_size
+    unsigned int* width,
+    unsigned int* height,
+    unsigned int* bpp,
+    unsigned long* frame_size,
+    unsigned long* frame_number
 )
 {
-    if (!g_camera.initialized)
+    if (!g_initialized)
     {
         return CAMCTRL_NOT_INITIALIZED;
     }
 
-    if (g_camera.current_frame.data == NULL)
+    if (width == NULL || height == NULL || bpp == NULL || frame_size == NULL || frame_number == NULL)
     {
-        return CAMCTRL_ERROR;
+        return CAMCTRL_INVALID_ARGUMENT;
     }
 
-    if (width != NULL)
-        *width = g_camera.current_frame.width;
+    *width = g_width;
+    *height = g_height;
+    *bpp = g_bpp;
+    *frame_size = g_frame_size;
+    *frame_number = g_frame_number;
 
-    if (height != NULL)
-        *height = g_camera.current_frame.height;
-
-    if (pixel_format != NULL)
-        *pixel_format = g_camera.current_frame.pixel_format;
-
-    if (frame_size != NULL)
-        *frame_size = g_camera.current_frame.frame_size;
-
-    return CAMCTRL_OK;
+    return CAMCTRL_SUCCESS;
 }
 
 int camctrl_copy_frame(
-    // unfinished
+    unsigned char* destination,
+    unsigned long destination_size
+)
+{
+    if (!g_initialized)
+    {
+        return CAMCTRL_NOT_INITIALIZED;
+    }
+
+    if (destination == NULL)
+    {
+        return CAMCTRL_INVALID_ARGUMENT;
+    }
+
+    if (destination_size < g_frame_size)
+    {
+        return CAMCTRL_BUFFER_TOO_SMALL;
+    }
+
+    if (g_frame_number == 0)
+    {
+        return CAMCTRL_NO_FRAME;
+    }
+
+    memcpy(destination, g_frame_buffer, g_frame_size);
+
+    return CAMCTRL_SUCCESS;
+}
+
+void camctrl_print_info(void)
+{
+    if (!g_initialized)
+    {
+        printf("CAMCTRL: Camera is not initialized.\n");
+        return;
+    }
+
+    printf("CAMCTRL Camera Info\n");
+
+    printf("Resolution: %u x %u\n", g_width, g_height);
+
+    printf("Colour depth: %u bpp\n", g_bpp);
+
+    printf("Frame size: %lu bytes\n", g_frame_size);
+
+    printf("Frame count: %lu\n", g_frame_number);
+}
+
+static void camctrl_generate_test_frame(
+    unsigned char* buffer,
+    unsigned int width,
+    unsigned int height
+)
+{
+    unsigned int x;
+    unsigned int y;
+
+    if (buffer == NULL)
+    {
+        return;
+    }
+
+    /*
+    RGB24 test
+    this is only for testing camctrl
+    it isnt the final camera output
+    */
+
+    for (y = 0; y < height; y++)
+    {
+        for (x = 0; x < width; x++)
+        {
+            unsigned long index;
+
+            index = ((unsigned long)y * (unsigned long)width + (unsigned long)x) * 3;
+
+            buffer[index + 0] = (unsigned char)(x % 256);
+
+            buffer[index + 1] = (unsigned char)(y % 256);
+
+            buffer[index + 2] = (unsigned char)((x + y) % 256);
+        }
+    }
+}
+
+int main(void)
+{
+    int result;
+
+    unsigned int width;
+    unsigned int height;
+    unsigned int bpp;
+
+    unsigned long frame_size;
+    unsigned long frame_number;
+
+    unsigned char* test_frame;
+    unsigned char* copied_frame;
+
+    printf("WDSYS CAMCTRL TEST COPY\n");
+
+    result = camctrl_init(CAMCTRL_DEFAULT_WIDTH, CAMCTRL_DEFAULT_HEIGHT, CAMCTRL_DEFAULT_BPP);
