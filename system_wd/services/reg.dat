@@ -1,12 +1,62 @@
 reg.dat
 
-[ "TEST REGISTRY 1"
+[ "TEST REGISTRY"
 	ENTRYNAME=[component].[type]/[affections]
-	VALUEDATA="[STRING]":FUNCTION:
-:: ]
+	VALUEDATA="STRING":function:
+:test-call: ]
 
-[ "TEST REGISTRY 2"
-	ENTRYNAME=[component1].[type1]/[affections1]
-	VALUEDATA="[STRING1]":FUNCTION1:
-:: ]
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "DIGEST EFFECT - Refreshing"
+	ENTRYNAME=digest.effect/Refreshing/affects_mood
+	VALUEDATA="Refreshing":EXPIRES=1788731397:STATUS=Active:
+:APPLY: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "DIGEST EFFECT - Refreshing"
+	ENTRYNAME=digest.effect/Refreshing/affects_mood
+	VALUEDATA="Refreshing":EXPIRES=1788731397:STATUS=Active:
+:APPLY: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "DIGEST EFFECT - Refreshing"
+	ENTRYNAME=digest.effect/Refreshing/affects_mood
+	VALUEDATA="Refreshing":EXPIRES=1788731397:STATUS=Active:
+:APPLY: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
 
