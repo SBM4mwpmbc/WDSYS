@@ -60,3 +60,1496 @@ reg.dat
 	VALUEDATA="WORKS":worktogether:
 :when_test: ]
 
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+[ "DIGEST EFFECT - Refreshing"
+	ENTRYNAME=digest.effect/Refreshing/affects_mood
+	VALUEDATA="Refreshing":EXPIRES=1788732632:STATUS=Active:
+:APPLY: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+reg.dat
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "TEST REGISTRY"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="STRING":function:
+:test-call: ]
+
+[ "Test BIG_ONE reg"
+	ENTRYNAME=[REGMGMT_DIGESTREG].[EXPERIMENT]/[worktogethuh]
+	VALUEDATA="WORKS":worktogether:
+:when_test: ]
+
+
+
+
+
+
