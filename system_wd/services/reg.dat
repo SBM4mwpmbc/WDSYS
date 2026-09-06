@@ -1,0 +1,12 @@
+reg.dat
+
+[ "TEST REGISTRY 1"
+	ENTRYNAME=[component].[type]/[affections]
+	VALUEDATA="[STRING]":FUNCTION:
+:: ]
+
+[ "TEST REGISTRY 2"
+	ENTRYNAME=[component1].[type1]/[affections1]
+	VALUEDATA="[STRING1]":FUNCTION1:
+:: ]
+
