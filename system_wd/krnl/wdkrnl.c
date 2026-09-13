@@ -64,13 +64,6 @@
 #define WD_INIT_VERSION 1
 #define WD_INIT_MAX_RESTARTS 3
 
-typedef int (*WD_DEVICE_DRIVER_PROBE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_REMOVE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_ENABLE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_DISABLE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_POWER_SET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE state);
-typedef int (*WD_DEVICE_DRIVER_POWER_GET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE* state);
-
 typedef enum
 {
     WD_INIT_OPERATION_NONE = 0,
@@ -381,30 +374,6 @@ typedef struct
 
 } WD_PE_DOS_HEADER;
 
-typedef struct 
-{
-    uint32_t id;
-    char name[WD_DEVICE_MAX_DRIVER_NAME];
-
-    WD_HARDWARE_TYPE supported_type;
-
-    WD_DEVICE_DRIVER_PROBE probe;
-    WD_DEVICE_DRIVER_REMOVE remove;
-    WD_DEVICE_DRIVER_ENABLE enable;
-    WD_DEVICE_DRIVER_DISABLE disable;
-    WD_DEVICE_DRIVER_POWER_SET power_set;
-    WD_DEVICE_DRIVER_POWER_GET power_get;
-
-    uint8_t registered;
-    uint8_t bound;
-    uint32_t bound_device_id;
-} WD_DEVICE_DRIVER;
-
-static WD_DEVICE_DRIVER g_device_drivers[WD_DEVICE_MAX_DRIVERS];
-
-static uint32_t g_device_driver_count = 0;
-static uint8_t g_device_driver_management_initialized = 0;
-
 typedef struct
 {
     uint8_t initialized;
@@ -427,8 +396,6 @@ typedef struct
 } WD_HEALTH_STATUS;
 
 static WD_HEALTH_STATUS g_health_status;
-
-static WD_PROCESS g_processes[WD_PROCESS_MAX_PROCESSES];
 
 static uint32_t g_process_count = 0;
 
@@ -647,11 +614,42 @@ typedef struct
 
 } WD_DEVICE;
 
+typedef int (*WD_DEVICE_DRIVER_PROBE)(WD_DEVICE* device);
+typedef int (*WD_DEVICE_DRIVER_REMOVE)(WD_DEVICE* device);
+typedef int (*WD_DEVICE_DRIVER_ENABLE)(WD_DEVICE* device);
+typedef int (*WD_DEVICE_DRIVER_DISABLE)(WD_DEVICE* device);
+typedef int (*WD_DEVICE_DRIVER_POWER_SET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE state);
+typedef int (*WD_DEVICE_DRIVER_POWER_GET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE* state);
+
 static WD_DEVICE g_devices[WD_DEVICE_MAX_DEVICES];
 
 static uint32_t g_device_count = 0;
 
 static uint8_t g_device_management_initialized = 0;
+
+typedef struct 
+{
+    uint32_t id;
+    char name[WD_DEVICE_MAX_DRIVER_NAME];
+
+    WD_HARDWARE_TYPE supported_type;
+
+    WD_DEVICE_DRIVER_PROBE probe;
+    WD_DEVICE_DRIVER_REMOVE remove;
+    WD_DEVICE_DRIVER_ENABLE enable;
+    WD_DEVICE_DRIVER_DISABLE disable;
+    WD_DEVICE_DRIVER_POWER_SET power_set;
+    WD_DEVICE_DRIVER_POWER_GET power_get;
+
+    uint8_t registered;
+    uint8_t bound;
+    uint32_t bound_device_id;
+} WD_DEVICE_DRIVER;
+
+static WD_DEVICE_DRIVER g_device_drivers[WD_DEVICE_MAX_DRIVERS];
+
+static uint32_t g_device_driver_count = 0;
+static uint8_t g_device_driver_management_initialized = 0;
 
 typedef struct
 {
@@ -896,6 +894,8 @@ typedef struct
 
 } WD_PROCESS;
 
+static WD_PROCESS g_processes[WD_PROCESS_MAX_PROCESSES];
+
 typedef struct
 {
     uint32_t id;
@@ -1022,16 +1022,45 @@ static uint64_t g_memory_total = 0;
 static uint64_t g_memory_available = 0;
 static uint32_t g_storage_device_count = 0;
 
-typedef int (*WD_DEVICE_DRIVER_PROBE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_REMOVE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_ENABLE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_DISABLE)(WD_DEVICE* device);
-typedef int (*WD_DEVICE_DRIVER_POWER_SET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE state);
-typedef int (*WD_DEVICE_DRIVER_POWER_GET)(WD_DEVICE* device, WD_DEVICE_POWER_STATE* state);
+static uint32_t g_kernel_status = WD_KRNL_SUCCESS;
+static WD_KRNL_STATE g_kernel_state = WD_KRNL_STATE_INITIALIZING;
 
 int wdkrnl_init_handoff_initialize(WD_INIT_HANDOFF* handoff);
 
-int wdkrnl_init_handoff_validate(const WD_INIT_HANDOFF* handoff);
+int wdkrnl_init_handoff_validate(const WD_INIT_HANDOFF* handoff)
+{
+    if (handoff == NULL)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (handoff->version == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (handoff->size < sizeof(WD_INIT_HANDOFF))
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (handoff->kernel_base == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (handoff->kernel_size == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (handoff->cpu_count == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    return WD_KRNL_SUCCESS;
+}
 
 int wdkrnl_init_handoff_prepare(void);
 
@@ -1432,15 +1461,6 @@ int wdkrnl_health_check(void) // FUCKITGJGNFRJO;IFFKGMRIJGLTFVDJIOFUJFFUCKCKCK H
         return WD_KRNL_FATAL_ERROR;
     }
 
-    if (wdkrnl_memory_validate() != WD_KRNL_SUCCESS)
-    {
-        g_health_status.state = WD_HEALTH_STATE_DEGRADED;
-
-        g_health_status.failure_count++;
-
-        return WD_KRNL_FATAL_ERROR;
-    }
-
     // temporary placeholder for the validations
 
     g_health_status.state = WD_HEALTH_STATE_HEALTHY;
@@ -1731,7 +1751,21 @@ WD_RECOVERY_ERROR wdkrnl_recovery_get_panic_error(void)
     return (WD_RECOVERY_ERROR) g_recovery_status.panic_error;
 }
 
-int wdkrnl_watchdog_initialize(void);
+int wdkrnl_watchdog_initialize(void)
+{
+    g_watchdog_status.initialized = 0;
+    g_watchdog_status.enabled = 1;
+
+    g_watchdog_status.heartbeat = 0;
+    g_watchdog_status.last_checked_heartbeat = 0;
+
+    g_watchdog_status.check_count = 0;
+    g_watchdog_status.failure_count = 0;
+
+    g_watchdog_status.initialized = 1;
+
+    return WD_KRNL_SUCCESS;
+}
 
 int wdkrnl_watchdog_check(void)
 {
@@ -4161,6 +4195,47 @@ int wdkrnl_device_validate_interface(void)
     return WD_KRNL_SUCCESS;
 }
 
+int wdkrnl_device_validate_lifecycle_system(void)
+{
+    uint32_t i;
+    WD_DEVICE* device;
+
+    if (!g_device_management_initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    for (i = 0; i < WD_DEVICE_MAX_DEVICES; i++)
+    {
+        device = &g_devices[i];
+
+        if (device->state == WD_DEVICE_STATE_UNUSED)
+        {
+            continue;
+        }
+
+        if (!device->initialized &&
+            device->state != WD_DEVICE_STATE_REGISTERED)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->state == WD_DEVICE_STATE_READY &&
+            !device->initialized)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->state == WD_DEVICE_STATE_ERROR &&
+            device->error_code == 0)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+    }
+
+    return WD_KRNL_SUCCESS;
+}
+
 int wdkrnl_device_validate_system(void)
 {
     if (!g_device_management_initialized)
@@ -4426,7 +4501,55 @@ int wdkrnl_power_is_transitioning(void)
     return g_power_status.transition_active ? 1 : 0;
 }
 
-int wdkrnl_device_power_transition(WD_DEVICE* device, WD_DEVICE_POWER_STATE target);
+int wdkrnl_device_power_transition(
+    WD_DEVICE* device,
+    WD_DEVICE_POWER_STATE target)
+{
+    if (device == NULL)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (!device->present)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (!device->power_management_supported)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (device->power_transition_active)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (target < WD_DEVICE_POWER_ON ||
+        target > WD_DEVICE_POWER_OFF)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (device->power_state == target)
+    {
+        return WD_KRNL_SUCCESS;
+    }
+
+    if (target == WD_DEVICE_POWER_SLEEP &&
+        !device->wake_capable)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    device->power_transition_active = 1;
+
+    device->power_state = target;
+
+    device->power_transition_active = 0;
+
+    return WD_KRNL_SUCCESS;
+}
 
 WD_DEVICE_POWER_STATE wdkrnl_device_power_get(WD_DEVICE* device);
 int wdkrnl_device_power_is_on(WD_DEVICE* device);
@@ -5848,63 +5971,6 @@ static uint32_t wdkrnl_pe_validate_dos_header(const WD_PE_DOS_HEADER* header)
     return WD_KRNL_SUCCESS;
 }
 
-static uint32_t wdkrnl_process_create_stack(WD_PROCESS* process)
-{
-    if (process == 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    uint64_t stack_base = wdkrnl_memory_allocate_pages(16);
-
-    if (stack_base == 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    process->stack_base = stack_base;
-    process->stack_size = WD_PROCESS_STACK_SIZE;
-
-    return WD_KRNL_SUCCESS;
-}
-
-static uint32_t wdkrnl_thread_create_stack(
-    WD_THREAD* thread
-)
-{
-    if (thread == 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    if (!thread->initialized)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    if (thread->stack_base != 0 || thread->stack_size != 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    uint64_t stack_base = wdkrnl_memory_allocate_pages(16);
-
-    if (stack_base == 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    thread->stack_base = stack_base;
-
-    thread->stack_size = 16 * WD_MEMORY_PAGE_SIZE;
-
-    thread->context.rsp = thread->stack_base + thread->stack_size;
-
-    thread->context.rbp = thread->context.rsp;
-
-    return WD_KRNL_SUCCESS;
-}
-
 static uint32_t wdkrnl_pe_validate_signature(
     const uint8_t* image,
     uint64_t image_size,
@@ -5957,15 +6023,6 @@ static uint32_t wdkrnl_pe_validate_machine(uint16_t machine)
 }
 
 static volatile WD_KRNL_ERROR_CODE g_kernel_error = WD_KRNL_ERROR_NONE;
-
-static void wdkrnl_error(WD_KRNL_ERROR_CODE error)
-{
-    g_kernel_error = error;
-    g_kernel_status = WD_KRNL_FATAL_ERROR;
-    g_kernel_state = WD_KRNL_STATE_ERROR;
-
-    wdkrnl_halt();
-}
 
 static void wdkrnl_process_initialize(void)
 {
@@ -6875,98 +6932,6 @@ static uint32_t wdkrnl_storage_register_driver(
     return WD_KRNL_SUCCESS;
 }
 
-static void wdkrnl_storage_driver_initialize(void)
-{
-    g_storage_driver_count = 0;
-
-    for (uint32_t i = 0;
-         i < WD_STORAGE_MAX_DRIVERS;
-         i++)
-    {
-        g_storage_drivers[i].id = 0;
-
-        g_storage_drivers[i].type =
-            WD_STORAGE_TYPE_UNKNOWN;
-
-        g_storage_drivers[i].initialized = 0;
-        g_storage_drivers[i].available = 0;
-
-        g_storage_drivers[i].sector_count = 0;
-        g_storage_drivers[i].sector_size =
-            WD_STORAGE_SECTOR_SIZE;
-
-        g_storage_drivers[i].read = 0;
-        g_storage_drivers[i].write = 0;
-
-        for (uint32_t j = 0;
-             j < WD_STORAGE_DRIVER_NAME_LENGTH;
-             j++)
-        {
-            g_storage_drivers[i].name[j] = '\0';
-        }
-    }
-}
-
-static uint32_t wdkrnl_storage_register_driver(
-    WD_STORAGE_TYPE type,
-    uint64_t sector_count,
-    uint32_t sector_size,
-    WD_STORAGE_READ read,
-    WD_STORAGE_WRITE write,
-    const char* name
-)
-{
-    if (g_storage_driver_count >=
-        WD_STORAGE_MAX_DRIVERS)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    if (sector_size == 0)
-    {
-        return WD_KRNL_INIT_FAILED;
-    }
-
-    WD_STORAGE_DRIVER* driver =
-        &g_storage_drivers[
-            g_storage_driver_count
-        ];
-
-    driver->id =
-        g_storage_driver_count;
-
-    driver->type = type;
-
-    driver->sector_count = sector_count;
-    driver->sector_size = sector_size;
-
-    driver->read = read;
-    driver->write = write;
-
-    driver->initialized = 1;
-    driver->available = 1;
-
-    if (name != 0)
-    {
-        uint32_t i = 0;
-
-        while (
-            name[i] != '\0' &&
-            i < WD_STORAGE_DRIVER_NAME_LENGTH - 1
-        )
-        {
-            driver->name[i] = name[i];
-            i++;
-        }
-
-        driver->name[i] = '\0';
-    }
-
-    g_storage_driver_count++;
-
-    return WD_KRNL_SUCCESS;
-}
-
 static uint32_t wdkrnl_storage_read(
     uint32_t device_id,
     uint64_t lba,
@@ -7116,12 +7081,37 @@ static void wdkrnl_timer_initialize(uint32_t frequency)
     g_timer_frequency = frequency;
 }
 
-static void wdkrnl_timer_interrupt(void)
+static void wdkrnl_exception_initialize(void)
 {
-    g_timer_ticks++;
-    g_interrupt_count++;
+    g_exception_info.code = WD_EXCEPTION_RESERVED;
+    g_exception_info.instruction_pointer = 0;
+    g_exception_info.stack_pointer = 0;
+    g_exception_info.error_code = 0;
+    g_exception_info.occurred = 0;
+}
 
-    wdkrnl_timer_tick();
+static void wdkrnl_halt(void)
+{
+    for (;;)
+    {
+#if defined(__x86_64__) || defined(__i386__)
+        __asm__ volatile ("hlt");
+#else
+        // temporary fallback for unsupporated architectures
+        for (volatile uint32_t i = 0; i < 1000000; ++i)
+        {
+        }
+#endif
+    }
+}
+
+static void wdkrnl_error(WD_KRNL_ERROR_CODE error)
+{
+    g_kernel_error = error;
+    g_kernel_status = WD_KRNL_FATAL_ERROR;
+    g_kernel_state = WD_KRNL_STATE_ERROR;
+
+    wdkrnl_halt();
 }
 
 static void wd_krnl_exception_handler(
@@ -7140,37 +7130,19 @@ static void wd_krnl_exception_handler(
     wdkrnl_error(WD_KRNL_ERROR_EXCEPTION);
 }
 
-static void wdkrnl_exception_initialize(void)
-{
-    g_exception_info.code = WD_EXCEPTION_RESERVED;
-    g_exception_info.instruction_pointer = 0;
-    g_exception_info.stack_pointer = 0;
-    g_exception_info.error_code = 0;
-    g_exception_info.occurred = 0;
-}
-
-static volatile WD_KRNL_STATE g_kernel_state = WD_KRNL_STATE_OFF;
-static volatile uint32_t g_kernel_status = WD_KRNL_SUCCESS;
-
-static void wdkrnl_halt(void)
-{
-    for (;;)
-    {
-#if defined(__x86_64__) || defined(__i386__)
-        __asm__ volatile ("hlt");
-#else
-        // temporary fallback for unsupporated architectures
-        for (volatile uint32_t i = 0; i < 1000000; ++i)
-        {
-        }
-#endif
-    }
-}
-
 static void wdkrnl_timer_tick(void)
 {
     g_system_ticks++;
 }
+
+static void wdkrnl_timer_interrupt(void)
+{
+    g_timer_ticks++;
+    g_interrupt_count++;
+
+    wdkrnl_timer_tick();
+}
+
 
 static void wdkrnl_interrupt_initialize(void)
 {
@@ -7285,6 +7257,65 @@ static uint64_t wdkrnl_memory_allocate_pages(uint64_t page_count)
 
     return 0;
 }
+
+static uint32_t wdkrnl_thread_create_stack(
+    WD_THREAD* thread
+)
+{
+    if (thread == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (!thread->initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (thread->stack_base != 0 || thread->stack_size != 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    uint64_t stack_base = wdkrnl_memory_allocate_pages(16);
+
+    if (stack_base == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    thread->stack_base = stack_base;
+
+    thread->stack_size = 16 * WD_MEMORY_PAGE_SIZE;
+
+    thread->context.rsp = thread->stack_base + thread->stack_size;
+
+    thread->context.rbp = thread->context.rsp;
+
+    return WD_KRNL_SUCCESS;
+}
+
+static uint32_t wdkrnl_process_create_stack(WD_PROCESS* process)
+{
+    if (process == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    uint64_t stack_base = wdkrnl_memory_allocate_pages(16);
+
+    if (stack_base == 0)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    process->stack_base = stack_base;
+    process->stack_size = WD_PROCESS_STACK_SIZE;
+
+    return WD_KRNL_SUCCESS;
+}
+
+// compiler please shut the fuck up
 
 static uint32_t wdkrnl_memory_free_pages(uint64_t base, uint64_t page_count)
 {
@@ -7430,12 +7461,24 @@ static void wdkrnl_runtime_tick(void)
 
 static void wdkrnl_runtime(void)
 {
+
     // YOU SHALL NOT RETURN MOTHERFUCKER
     g_kernel_state = WD_KRNL_STATE_RUNNING;
 
     for (;;)
     {
         wdkrnl_runtime_tick();
+
+#if defined(WD_BARE_METAL)
+#if defined(__x86_64__) || defined(__i386__)
+        __asm__ volatile ("hlt");
+#endif
+#else
+        /* Host-side kernel test loop. */
+        for (volatile uint32_t i = 0; i < 1000000; i++)
+        {
+        }
+#endif
 
 #if defined(__x86_64__) || defined(__i386__)
         __asm__ volatile ("hlt");
@@ -7480,3 +7523,14 @@ void wdkrnl_entry(WD_BOOT_INFO* boot_info)
 
     wdkrnl_halt();
 } // September 11th, 2026. This currently is at 2001 lines. 43 kb of fucking source. coincidence? no.
+
+int main(void)
+{
+    WD_BOOT_INFO boot_info;
+
+    boot_info = (WD_BOOT_INFO){0};
+
+    wdkrnl_entry(&boot_info);
+
+    return 0;
+}
