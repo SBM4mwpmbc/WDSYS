@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo
+echo "[WDSYS] Worker Drone System"
+echo "[WDSYS] Linux kernel initialized"
+echo "[WDSYS] Starting WDSYS userspace..."
+echo
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+echo "[WDSYS] Userspace initialized"
+echo "[WDSYS] WDSYS boot successful"
+echo
+
+exec /bin/sh

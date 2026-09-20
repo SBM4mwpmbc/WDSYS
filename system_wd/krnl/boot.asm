@@ -1,74 +1,73 @@
 ; WDSYS UEFI x86-64 boot entry
-; NASM syntax
+;
+; MASM / ml64 syntax
 
-BITS 64
+PUBLIC efi_main
+EXTERN wdkrnl_entry:PROC
 
-default rel
+.data
 
-section .bss
+ALIGN 8
 
-align 8
-wd_boot_info:
-    resq 7
+wd_boot_info QWORD 7 DUP(0)
 
+.code
 
-section .text
+efi_main PROC
 
-global efi_main
-extern wdkrnl_entry
+; UEFI x64 entry:
+; RCX = EFI_HANDLE ImageHandle
+; RDX = EFI_SYSTEM_TABLE *SystemTable
+;
+; Reserve Microsoft x64 shadow space
+; and maintain 16-byte stack alignment.
 
+sub rsp, 40
 
-efi_main:
+; ------------------------------------------------
+; Build WD_BOOT_INFO
+; ------------------------------------------------
 
-    ; UEFI x64 entry:
-    ; RCX = EFI_HANDLE ImageHandle
-    ; RDX = EFI_SYSTEM_TABLE *SystemTable
+; system_table
+mov QWORD PTR [wd_boot_info + 00h], rdx
 
-    ; Reserve Microsoft x64 shadow space
-    ; and maintain 16-byte stack alignment.
-    sub rsp, 40
+; memory_map
+mov QWORD PTR [wd_boot_info + 08h], 0
 
-    ; ------------------------------------------------
-    ; Build WD_BOOT_INFO
-    ; ------------------------------------------------
+; memory_map_size
+mov QWORD PTR [wd_boot_info + 10h], 0
 
-    ; system_table
-    mov [wd_boot_info + 0x00], rdx
+; memory_descriptor_size
+mov QWORD PTR [wd_boot_info + 18h], 0
 
-    ; memory_map
-    mov qword [wd_boot_info + 0x08], 0
+; kernel_base
+mov QWORD PTR [wd_boot_info + 20h], 0
 
-    ; memory_map_size
-    mov qword [wd_boot_info + 0x10], 0
+; kernel_size
+mov QWORD PTR [wd_boot_info + 28h], 0
 
-    ; memory_descriptor_size
-    mov qword [wd_boot_info + 0x18], 0
+; uefi_boot = 1
+mov BYTE PTR [wd_boot_info + 30h], 1
 
-    ; kernel_base
-    mov qword [wd_boot_info + 0x20], 0
+; ------------------------------------------------
+; Kernel handoff
+; ------------------------------------------------
 
-    ; kernel_size
-    mov qword [wd_boot_info + 0x28], 0
+; wdkrnl_entry(WD_BOOT_INFO*)
+lea rcx, wd_boot_info
+call wdkrnl_entry
 
-    ; uefi_boot = 1
-    mov byte [wd_boot_info + 0x30], 1
+; ------------------------------------------------
+; The kernel should NEVER return.
+; ------------------------------------------------
 
-    ; ------------------------------------------------
-    ; Kernel handoff
-    ; ------------------------------------------------
+add rsp, 40
 
-    ; wdkrnl_entry(WD_BOOT_INFO*)
-    lea rcx, [wd_boot_info]
+halt_loop:
+cli
+hlt
+jmp halt_loop
 
-    call wdkrnl_entry
+efi_main ENDP
 
-    ; ------------------------------------------------
-    ; The kernel should NEVER return.
-    ; ------------------------------------------------
-
-    add rsp, 40
-
-.halt:
-    cli
-    hlt
-    jmp .halt
+END

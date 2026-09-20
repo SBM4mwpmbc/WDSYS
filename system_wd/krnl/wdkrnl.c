@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 
 #define WD_KERNEL_MAJOR 1
 #define WD_KERNEL_MINOR 0
@@ -63,6 +64,41 @@
 #define WD_INIT_PROCESS_NAME "wdinithost.exe"
 #define WD_INIT_VERSION 1
 #define WD_INIT_MAX_RESTARTS 3
+
+typedef uint16_t WD_CHAR16;
+
+typedef struct
+{
+    void* reset;
+    void* output_string;
+    void* test_string;
+    void* query_mode;
+    void* set_mode;
+    void* set_attribute;
+    void* clear_screen;
+    void* set_cursor_position;
+    void* enable_cursor;
+    void* mode;
+} WD_EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
+
+typedef struct
+{
+    uint8_t header[24];
+
+    void* firmware_vendor;
+    uint32_t firmware_revision;
+
+    void* console_in_handle;
+    void* con_in;
+
+    void* console_out_handle;
+    WD_EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL* con_out;
+
+} WD_EFI_SYSTEM_TABLE;
+
+static WD_EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL* g_wd_console = 0;
+
+
 
 typedef enum
 {
@@ -1024,6 +1060,67 @@ static uint32_t g_storage_device_count = 0;
 
 static uint32_t g_kernel_status = WD_KRNL_SUCCESS;
 static WD_KRNL_STATE g_kernel_state = WD_KRNL_STATE_INITIALIZING;
+
+static void wd_console_initialize(WD_BOOT_INFO* boot_info)
+{
+    WD_EFI_SYSTEM_TABLE* system_table;
+
+    if (boot_info == 0)
+    {
+        return;
+    }
+
+    if (boot_info->system_table == 0)
+    {
+        return;
+    }
+
+    system_table =
+        (WD_EFI_SYSTEM_TABLE*)(uintptr_t)boot_info->system_table;
+
+    g_wd_console = system_table->con_out;
+}
+
+static void wd_console_write(const char* text)
+{
+    WD_CHAR16 buffer[256];
+    uint32_t i;
+    void (*output_string)(
+        void*,
+        WD_CHAR16*
+    );
+
+    if (g_wd_console == 0)
+    {
+        return;
+    }
+
+    if (text == 0)
+    {
+        return;
+    }
+
+    i = 0;
+
+    while (text[i] != '\0' && i < 254)
+    {
+        buffer[i] = (WD_CHAR16)(uint8_t)text[i];
+        i++;
+    }
+
+    buffer[i] = 0;
+
+    output_string =
+        (void (*)(void*, WD_CHAR16*))
+        g_wd_console->output_string;
+
+    if (output_string == 0)
+    {
+        return;
+    }
+
+    output_string(g_wd_console, buffer);
+}
 
 int wdkrnl_init_handoff_initialize(WD_INIT_HANDOFF* handoff);
 
@@ -4558,7 +4655,125 @@ int wdkrnl_device_power_is_sleeping(WD_DEVICE* device);
 int wdkrnl_device_power_is_off(WD_DEVICE* device);
 
 int wdkrnl_device_power_validate(WD_DEVICE* device);
-int wdkrnl_device_power_validate_all(void);
+int wdkrnl_device_power_validate_all(void)
+{
+    uint32_t i;
+    WD_DEVICE* device;
+
+    if (!g_device_management_initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    for (i = 0; i < WD_DEVICE_MAX_DEVICES; i++)
+    {
+        device = &g_devices[i];
+
+        if (device->state == WD_DEVICE_STATE_UNUSED)
+        {
+            continue;
+        }
+
+        if (!device->present)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->power_state < WD_DEVICE_POWER_ON ||
+            device->power_state > WD_DEVICE_POWER_OFF)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->power_transition_active > 1)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->power_management_supported > 1)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->wake_capable > 1)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->power_state == WD_DEVICE_POWER_SLEEP &&
+            device->power_management_supported &&
+            !device->wake_capable)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+    }
+
+    return WD_KRNL_SUCCESS;
+}
+
+int wdkrnl_power_prepare_sleep(void)
+{
+    if (!g_power_status.initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (g_power_status.transition_active)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    g_power_status.transition_active = 1;
+
+    if (wdkrnl_device_power_validate_all() != WD_KRNL_SUCCESS)
+    {
+        g_power_status.transition_active = 0;
+        return WD_KRNL_FATAL_ERROR;
+    }
+
+    return WD_KRNL_SUCCESS;
+}
+
+int wdkrnl_power_enter_sleep(void)
+{
+    if (!g_power_status.initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (!g_power_status.transition_active)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    g_power_status.state = WD_POWER_STATE_SLEEP;
+
+    return WD_KRNL_SUCCESS;
+}
+
+int wdkrnl_power_wake(void)
+{
+    if (!g_power_status.initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (!g_power_status.transition_active)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (g_power_status.state != WD_POWER_STATE_SLEEP)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    g_power_status.state = WD_POWER_STATE_ON;
+
+    g_power_status.transition_active = 0;
+
+    return WD_KRNL_SUCCESS;
+}
 
 int wdkrnl_power_sleep(void)
 {
@@ -4581,10 +4796,8 @@ int wdkrnl_power_sleep(void)
     return wdkrnl_power_wake();
 }
 
-int wdkrnl_power_prepare_sleep(void);
 int wdkrnl_power_transition(WD_POWER_STATE target);
 WD_DEVICE_POWER_STATE wdkrnl_device_power_get(WD_DEVICE* device);
-int wdkrnl_power_wake(void);
 int wdkrnl_power_is_sleeping(void);
 
 int wdkrnl_power_set_charging_mode(uint8_t enabled)
@@ -4814,7 +5027,78 @@ int wdkrnl_power_request(WD_POWER_REQUEST* request)
 
 int wdkrnl_power_validate_shutdown(void);
 int wdkrnl_power_validate_reboot(void);
-int wdkrnl_power_validate_interface(void);
+
+int wdkrnl_power_validate_interface(void)
+{
+    if (!g_power_status.initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    if (g_power_status.state < WD_POWER_STATE_ON ||
+        g_power_status.state > WD_POWER_STATE_SLEEP)
+    {
+        return WD_KRNL_FATAL_ERROR;
+    }
+
+    if (g_power_status.charging_mode > 1)
+    {
+        return WD_KRNL_FATAL_ERROR;
+    }
+
+    if (g_power_status.transition_active > 1)
+    {
+        return WD_KRNL_FATAL_ERROR;
+    }
+
+    return WD_KRNL_SUCCESS;
+}
+
+int wdkrnl_power_validate_device_states(void)
+{
+    uint32_t i;
+    WD_DEVICE* device;
+
+    if (!g_power_status.initialized)
+    {
+        return WD_KRNL_INIT_FAILED;
+    }
+
+    for (i = 0; i < WD_DEVICE_MAX_DEVICES; i++)
+    {
+        device = &g_devices[i];
+
+        if (device->state == WD_DEVICE_STATE_UNUSED)
+        {
+            continue;
+        }
+
+        if (!device->present)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (!device->power_management_supported &&
+            device->power_state != WD_DEVICE_POWER_ON)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->power_state == WD_DEVICE_POWER_SLEEP &&
+            !device->wake_capable)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+
+        if (device->state == WD_DEVICE_STATE_DISABLED &&
+            device->power_state == WD_DEVICE_POWER_ON)
+        {
+            return WD_KRNL_FATAL_ERROR;
+        }
+    }
+
+    return WD_KRNL_SUCCESS;
+}
 
 int wdkrnl_power_validate_system(void)
 {
@@ -4850,8 +5134,6 @@ int wdkrnl_power_validate_system(void)
 
     return WD_KRNL_SUCCESS;
 }
-
-int wdkrnl_power_validate_device_states(void);
 
 int wdkrnl_power_validate_charging_mode(void)
 {
@@ -7413,39 +7695,87 @@ static void wdkrnl_cpu_initialize(void)
 #endif
 }
 
-static uint32_t wdkrnl_initialize(void)
+static uint32_t wdkrnl_initialize(WD_BOOT_INFO* boot_info)
 {
     // future init will happen here
+    wd_console_initialize(boot_info);
 
     g_kernel_state = WD_KRNL_STATE_INITIALIZING;
+    wd_console_write("[WDKRNL] Starting initialzation.\r\n");
 
     wdkrnl_cpu_initialize();
+    wd_console_write("[WDKRNL] Initializing CPU.\r\n");
+
     wdkrnl_hardware_discovery_initialize();
+    wd_console_write("[WDKRNL] Discovering hardware.\r\n");
+
     wdkrnl_hardware_cpu_discover();
+    wd_console_write("[WDKRNL] CPU hardwary discovery in progress.\r\n");
+
     wdkrnl_hardware_device_initialize();
+    wd_console_write("[WDKRNL] Initializing devices.\r\n");
+
     wdkrnl_hardware_identify();
+    wd_console_write("[WDKRNL] Identifying hardware.\r\n");
+
     wdkrnl_memory_initialize();
+    wd_console_write("[WDKRNL] Initializing memory.\r\n");
+
     wdkrnl_exception_initialize();
+    wd_console_write("[WDKRNL] Initializing bugcheckhandler.\r\n");
+
     wdkrnl_device_initialize();
+    wd_console_write("[WDKRNL] Initializing expanded devices.\r\n");
+
     wdkrnl_device_driver_initialize();
+    wd_console_write("[WDKRNL] Initializing drivers.\r\n");
+
     wdkrnl_idt_initialize();
+    wd_console_write("[WDKRNL] Initializing IDT.\r\n");
+
     wdkrnl_timer_initialize(100);
+    wd_console_write("[WDKRNL] Initializing timer.\r\n");
+
     wdkrnl_idt_load();
     wdkrnl_interrupt_initialize();
+
     wdkrnl_hardware_initialize();
+    wd_console_write("[WDKRNL] Initializing hardware.\r\n");
+
     wdkrnl_storage_initialize();
+    wd_console_write("[WDKRNL] Initializing storage.\r\n");
+
     wdkrnl_storage_driver_initialize();
+
     wdkrnl_filesystem_initialize();
+    wd_console_write("[WDKRNL] Initializing filesystem.\r\n");
+
     wdkrnl_executable_initialize();
+    wd_console_write("[WDKRNL] Initializing .exes.\r\n");
+
     wdkrnl_process_initialize();
+    wd_console_write("[WDKRNL] Initializing processes.\r\n");
+
     wdkrnl_thread_initialize();
+    wd_console_write("[WDKRNL] Initializing threads.\r\n");
+
     wdkrnl_ipc_initialize();
+    wd_console_write("[WDKRNL] Initializing IPCs.\r\n");
+
     wdkrnl_power_initialize();
+    wd_console_write("[WDKRNL] Initializing power.\r\n");
+
     wdkrnl_recovery_initialize();
+    wd_console_write("[WDKRNL] Initializing recovery handler.\r\n");
+
     wdkrnl_health_initialize();
+    wd_console_write("[WDKRNL] Initializing health checkers.\r\n");
+
     wdkrnl_watchdog_initialize();
-    
+    wd_console_write("[WDKRNL] Initializing watchdog.\r\n");
+
     g_kernel_status = WD_KRNL_SUCCESS;
+    wd_console_write("[WDKRNL] KRNL boot success.\r\n");
 
     wdkrnl_health_check();
 
@@ -7465,6 +7795,8 @@ static void wdkrnl_runtime(void)
     // YOU SHALL NOT RETURN MOTHERFUCKER
     g_kernel_state = WD_KRNL_STATE_RUNNING;
 
+    wd_console_write("[WDKRNL] Entered runtime\r\n");
+
     for (;;)
     {
         wdkrnl_runtime_tick();
@@ -7483,12 +7815,15 @@ static void wdkrnl_runtime(void)
 #if defined(__x86_64__) || defined(__i386__)
         __asm__ volatile ("hlt");
 #endif
+
     }
 }
 
 void wdkrnl_entry(WD_BOOT_INFO* boot_info)
 {
     uint32_t result;
+
+    wd_console_write("[WDKRNL] Entry point start\r\n");
 
     // krnl staats hea dumbass petah
 
@@ -7502,26 +7837,18 @@ void wdkrnl_entry(WD_BOOT_INFO* boot_info)
         wdkrnl_halt();
     }
 
-    result = wdkrnl_initialize();
+    result = wdkrnl_initialize(boot_info);
 
     if (result != WD_KRNL_SUCCESS)
     {
         g_kernel_status = WD_KRNL_INIT_FAILED;
         g_kernel_state = WD_KRNL_STATE_ERROR;
-
         wdkrnl_halt();
     }
 
     // init succeed enter runtime
 
     wdkrnl_runtime();
-
-    // should never be reached hopefully
-
-    g_kernel_status = WD_KRNL_FATAL_ERROR;
-    g_kernel_state = WD_KRNL_STATE_ERROR;
-
-    wdkrnl_halt();
 } // September 11th, 2026. This currently is at 2001 lines. 43 kb of fucking source. coincidence? no.
 
 int main(void)
