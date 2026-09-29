@@ -111,8 +111,8 @@ int copy_files()
     // todo: copy CD/USB files to harddisk here
 
     std::cout << "[WDSYS SETUP] Exploring files..\n" << std::endl;
-    std::filesystem::path source = "D:/WDSYS";
-    std::filesystem::path destination = "C:/WDSYS";
+    std::filesystem::path source = "D:\\WDSYS";
+    std::filesystem::path destination = "C:\\WDSYS";
 
     if (!std::filesystem::exists(source))
     {
