@@ -1,7 +1,1 @@
 reg.dat
-
-[ "wdsys-test-registry"
-	ENTRYNAME=fard
-	VALUEDATA="2123":mark-first-boot-validate-test:
-:se: ]
-

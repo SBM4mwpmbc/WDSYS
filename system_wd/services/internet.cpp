@@ -8,10 +8,17 @@ int internet_init(void)
 {
     std::cout << "[INTERNET] Initializing internet..\n" << std::endl;
 
-    // initialize:
-    // NM (NetworkManager)
-    // modem (ModemManager)
-    // other
+    std::cout << "[INTERNET] Checking the Network Manager\n" << std::endl;
+
+    int nm_status = system("nmcli -t -f RUNNING general > /dev/null 2>&1");
+
+    if (nm_status != 0)
+    {
+        std::cout << "[INTERNET] Network Manager is unavailable\n" << std::endl;
+        return 1;
+    }
+
+    std::cout << "[INTERNET] NetworkManager has been detected\n" << std::endl;
 
     internet_initialized = true;
 
@@ -30,7 +37,13 @@ int internet_connect()
 
     std::cout << "[INTERNET] Connecting to the internet..\n" << std::endl;
 
-    // establish connecton
+    int connection_status = system("nmcli connection up eth0 > /dev/null 2>&1");
+    
+    if (connection_status != 0)
+    {
+        std::cout << "[INTERNET] No active network connection.\n" << std::endl;
+        return 1;
+    }
 
     internet_connected = true;
 
