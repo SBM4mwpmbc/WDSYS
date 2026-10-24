@@ -1,0 +1,8 @@
+{
+  "personality": "personality.json",
+  "yolo_model": "yolov8n.pt",
+  "microphone_index": null,
+  "whisper_model": "large",
+  "wake_words": ["Oohzee", "uzi", "oohzee", "Uzi"],
+  "wake_prefixes": ["", "ok ", "hay ", "hey "]
+}
