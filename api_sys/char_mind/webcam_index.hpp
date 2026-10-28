@@ -1,25 +1,28 @@
+#ifndef WEBCAM_INDEX_HPP
+#define WEBCAM_INDEX_HPP
+
 #include <stdio.h>
 #include <string>
-#include <opencv2/opencv.hpp>
+#include <opencv.hpp>
 
 int test_camera_until_valid_frame(int indexx = 1, int target_frame = 35, int max_frames = 36)
 {
     printf("CAMOPEN at index ", indexx, "..");
-    cv::VideoCapture cap(indexx, cv::CAP_DSHOW)
+    cv::VideoCapture cap(indexx, cv::CAP_DSHOW);
     if (!cap.isOpened())
     {
         printf("Failed to open camera at index %d\n", indexx);
         return 1;
     }
 
-    valid_frame = NULL;
+    int valid_frame = NULL;
     int frame_count = 0;
 
     printf("CAPTURE TO: %d FRAMES::FIND VALID\n", max_frames);
 
     while (frame_count < max_frames)
     {
-        bool ret
+        bool ret = cap.read(frame);
         cv::Mat frame = cap.read();
         frame_count += 1;
         if (!ret)
@@ -69,7 +72,4 @@ int test_camera_until_valid_frame(int indexx = 1, int target_frame = 35, int max
     return 0;
 }
 
-int main(void)
-{
-    return test_camera_until_valid_frame();
-}
+#endif

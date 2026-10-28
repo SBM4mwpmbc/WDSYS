@@ -4,7 +4,16 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/vcpkg/installed/x64-windows/include"
+                "C:/vcpkg/installed/x64-windows/include",
+                "C:/vcpkg/installed/x64-windows/include/opencv4/opencv2",
+                "C:/vcpkg/installed/x64-windows/include/opencv4",
+                "C:/whisper.cpp/include",
+                "C:/whisper.cpp/",
+                "C:/vcpkg/installed/x64-windows/include/nlohmann",
+                "C:/whisper.cpp/ggml/include",
+                "C:/vcpkg/installed/x64-windows/include/curl",
+                "C:/vcpkg/installed/x64-windows/include/tesseract",
+                "C:/vcpkg/installed/x64-windows/include/leptonica"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,7 +21,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.26100.0",
-            "compilerPath": "cl.exe",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-msvc-x64"

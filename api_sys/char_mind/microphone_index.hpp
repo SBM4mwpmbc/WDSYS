@@ -1,8 +1,10 @@
+#ifndef MICROPHONE_INDEX_HPP
+#define MICROPHONE_INDEX_HPP
 #include <stdio.h>
 #include <iostream>
 #include <portaudio.h>
 
-int main(void)
+int microphone(void)
 {
     PaError err = Pa_Initialize();
 
@@ -36,3 +38,5 @@ int main(void)
     Pa_Terminate();
     return 0;
 }
+
+#endif
