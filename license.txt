@@ -10,8 +10,6 @@ All models are owned by imaninjapacker on Roblox (or a similar name idk)
 
 COPYRIGHT WDSYS V1 2026-2027, all rights reserved.
 
-Redistributing, reproducing, sharing source code (except Linux Source, as thats open source.), or any others against copyright laws is illegal.
-
 WDSYS Kernel is powered by Linux.
 
 Linux is protected under the GPL 2.0 license.
@@ -29,6 +27,8 @@ Luke Lerdwichagul
 Kevin Lerdwichagul
 Fard Inc.
 Meme War Productions & Meme Broadcasting Company
+ImDaGoatCreates
+Death Templer
 
 And several other close friends from Ferb's school.
 
@@ -44,3 +44,5 @@ Rust
 WDSYS is protected under MWP & MBC Terms of use and policies, and Fard Inc. Usages
 
 Idea from GLITCH and Liam Vickers
+
+WDSYS is open source. Contributing is free via pull requests and issues!!
