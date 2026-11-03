@@ -249,7 +249,7 @@ std::string trim(const std::string& input)
 void auto_update_memory(const char* user_input, const char* ai_reply)
 {
     json memory = load_memory();
-    // some ugly shit going on here! E
+    // some ugly stuff going on here! E
     auto now = std::chrono::system_clock::now();
     std::time_t time_now = std::chrono::system_clock::to_time_t(now);
     std::tm local_time{};
