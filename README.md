@@ -5,6 +5,7 @@ Welcome to the Worker Drone System (WDSYS), a somewhat replica of the Worker Dro
 
 Official Website for WDSYS: sites.google.com/view/workerdronesys-org
 Im getting a real domain soon, dont worry.
+
 **Official manual for WDSYS (READ BEFORE USING!!!!!!!!): docs.google.com/document/d/1OCP_3A7Lx5pRSDEfnrTf0xxLS0rIci_yojpp9yWKb4s/edit?usp=sharing**
 
 A system that is the WORKER DRONE FROM MURDER DRONES IN REAL LIFE! Powered by Linux. Oh my god I love linux.
