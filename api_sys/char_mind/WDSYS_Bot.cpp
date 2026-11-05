@@ -35,6 +35,18 @@
 
 // some namespaces and some global vars
 
+json response = requests.post("http://localhost:1234/v1/chat/completions", headers, data.dump(4));
+json headers = {
+        {"Content-Type", "application/json"}
+};  // i might change this, because i dont know the dang c++ func for this.
+
+auto now = std::chrono::system_clock::now();
+std::time_t time_now = std::chrono::system_clock::to_time_t(now);
+std::tm local_time{};
+localtime_s(&local_time, &time_now);
+std::ostringstream timestamp;
+timestamp << std::put_time(&local_time, "%Y-%m-%d %H:%M:%S");
+
 using json = nlohmann::json;
 namespace fs = std::filesystem;
 const char* MICROPHONE_INDEX = "microphone_index.hpp";
@@ -250,12 +262,6 @@ void auto_update_memory(const char* user_input, const char* ai_reply)
 {
     json memory = load_memory();
     // some ugly stuff going on here! E
-    auto now = std::chrono::system_clock::now();
-    std::time_t time_now = std::chrono::system_clock::to_time_t(now);
-    std::tm local_time{};
-    localtime_s(&local_time, &time_now);
-    std::ostringstream timestamp;
-    timestamp << std::put_time(&local_time, "%Y-%m-%d %H:%M:%S");
 
     std::string cleaned_user_input = user_input ? trim(user_input) : "";
     std::string cleaned_ai_reply = ai_reply ? trim(ai_reply) : "";
@@ -345,16 +351,6 @@ std::string  get_chat_response(const char* user_input, const std::string& file_p
         })}
     };
 
-    json headers = {
-        {"Content-Type", "application/json"}
-    };
-
-    json response = requests.post(
-        "http://localhost:1234/v1/chat/completions",
-        headers,
-        data.dump(4)
-    );
-
     if (response.status_code == 200)
     {
         json response_json = response.json();
@@ -426,7 +422,8 @@ std::string detect_obj_from_frame()
 
   std::vector<double> class_ids;
 
-  for (const auto& detection : detections) {
+  for (const auto& detection : detections) 
+  {
     class_ids.push_back(detection.class_id);
   }
 
@@ -444,7 +441,7 @@ std::string detect_obj_from_frame()
 
   std::vector summary = {};
 
-  for (label : labels)
+  for (const auto& label : labels)
   {
     summary[label] = summary.get(label, 0)++;
   }
@@ -492,8 +489,8 @@ const char* describe_faces_in_frame()
 
       if (distance <= 0.45)
       {
-	face_matched = true;
-	break;
+		face_matched = true;
+		break;
       }
     }
 
@@ -503,7 +500,7 @@ const char* describe_faces_in_frame()
       summary[name] = summary.get(name, 0)++;
       if (name == USER_NAME)
       {
-	current_speaker = USER_NAME;
+		current_speaker = USER_NAME;
       }
     }
     else
@@ -570,7 +567,7 @@ const char* recognize_face_greeting()
 
       if (name == USER_NAME)
       {
-	std::string current_speaker = USER_NAME;
+		std::string current_speaker = USER_NAME;
       }
 
       return "Hey.. or whatever..";
@@ -680,13 +677,13 @@ int main(void)
 
       if (wake_text && precise_wakeword_detected())
       {
-	in_conversation = true;
-	if (current_speaker == "Unknown")
-	{
-	  current_speaker = USER_NAME;
-	}
+		in_conversation = true;
+		if (current_speaker == "Unknown")
+		{
+	  		current_speaker = USER_NAME;
+		}
 
-	printf(recognize_face_greeting());
+		printf(recognize_face_greeting());
       }
 
       continue;
@@ -701,17 +698,14 @@ int main(void)
 
     const char* user_text_lower = user_input.lower();
 
-    if (check_for_farewell(user_text_lower))
+    if (check_for_depart(user_text_lower))
     {
       in_conversation = false;
       current_speaker = "Unknown";
       continue;
     }
-    else if 
-
-  
-
-
-       
-  
-
+    else if (user_input == "What time is it?" || "What's the time?" || "What is the time right now?") // or hell
+	{
+		json response = "It is currently ", timestamp; // i dont even know if this is right lolz
+		printf(response);
+		auto_update_memory(user_input, response);
