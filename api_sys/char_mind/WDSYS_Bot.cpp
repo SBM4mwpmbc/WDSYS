@@ -696,16 +696,32 @@ int main(void)
       continue;
     }
 
-    const char* user_text_lower = user_input.lower();
+    const char* user_text_lower = user_input.tolower();
 
     if (check_for_depart(user_text_lower))
     {
+	  cv::Mat frame = capture_webcam_frame();
+	  // do NOT do the read text, as it'll be embarrasing..
+	  
       in_conversation = false;
       current_speaker = "Unknown";
       continue;
-    }
+    } // below, i still dont know if it applies to actual mind, but who cares
     else if (user_input == "What time is it?" || "What's the time?" || "What is the time right now?") // or hell
 	{
-		json response = "It is currently ", timestamp; // i dont even know if this is right lolz
-		printf(response);
-		auto_update_memory(user_input, response);
+	   cv::Mat frame = capture_webcam_frame();
+	   json response = "It is currently ", timestamp; // i dont even know if this is right lolz
+	   printf(response);
+	   auto_update_memory(user_input, response);
+	}
+	else if (user_input == "What does this say?" || "Read this" || "Can you read this please?" || "Can you read this?")
+    {
+	    cv::Mat frame = capture_webcam_frame();
+        std::string text = read_text_from_frame(frame).trim();
+		if (text)
+        {
+          json response = "It says ", text, " or whatever.";
+		}
+		else
+        {
+		  json response = "There's no text there? Prankster
