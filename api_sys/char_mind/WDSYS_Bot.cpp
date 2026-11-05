@@ -53,7 +53,7 @@ struct PRSE_RESPN
 
 whisper_context_params ctx_params = whisper_context_default_params();
 
-whisper_context* ctx = whisper_init_from_file_with_params("C:\\whisper.cpp\\ggml-base.en.bin", ctx_params);
+whisper_context* ctx = whisper_init_from_file_with_params("C:\\WDSYS\\api_sys\\char_mind\\whisper\\ggml-base.en.bin", ctx_params);
 
 // load configs
 
