@@ -711,7 +711,7 @@ int main(void)
 	{
 	   cv::Mat frame = capture_webcam_frame();
 	   json response = "It is currently ", timestamp; // i dont even know if this is right lolz
-	   printf(response);
+	   printf("%d\n", response);
 	   auto_update_memory(user_input, response);
 	}
 	else if (user_input == "What does this say?" || "Read this" || "Can you read this please?" || "Can you read this?")
@@ -720,8 +720,23 @@ int main(void)
         std::string text = read_text_from_frame(frame).trim();
 		if (text)
         {
-          json response = "It says ", text, " or whatever.";
+          json response = "It says ", text, " or whatever.\n";
 		}
 		else
         {
-		  json response = "There's no text there? Prankster
+		  json response = "There's no text there? Jeez, I hate pranks like this...\n";
+		}
+	}
+	else if (user_input == "Who do you see?" || "Who's there?" || "Who is there?" || "Is there anyone there?" || "Anyone there?")
+	{
+		cv::Mat frame = capture_webcam_frame();
+		const char* faces_desc = describe_faces_in_frame(frame);
+		printf("%d\n", faces_desc);
+		auto_update_memory(user_input, faces_desc);
+	}
+	else if (user_input == "Objects?" || "look!" || "Look!" || "Look there" || "Look over there")
+    {
+		cv::Mat frame = capture_webcam_frame();
+		const char* describe_faces_in_frame(frame);
+		std::string obj_desc = detect_objects_from_frame(frame);
+		json response = 
