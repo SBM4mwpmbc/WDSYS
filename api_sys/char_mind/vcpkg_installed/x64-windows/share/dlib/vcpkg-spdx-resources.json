@@ -1,0 +1,19 @@
+{
+  "packages": [
+{
+  "SPDXID" : "SPDXRef-resource-0",
+  "checksums" : 
+  [
+    {
+      "algorithm" : "SHA512",
+      "checksumValue" : "5104f12395a48ad2a9c196faab1b92d8ed5aaa026fff67f9a915ffd9a3c132ee2f68ce8b50a3c0bd3138ac4b42435bf6c0c5aa641bfabac47cde39ca465fe2f4"
+    }
+  ],
+  "copyrightText" : "NOASSERTION",
+  "downloadLocation" : "git+https://github.com/davisking/dlib@v20.0.1",
+  "licenseConcluded" : "NOASSERTION",
+  "licenseDeclared" : "NOASSERTION",
+  "name" : "davisking/dlib"
+}
+  ]
+}

@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../..
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: dlib
+Description: Numerical and networking C++ library
+Version: 20.0.1
+
+Libs: "-L${libdir}" -ldlib
+Requires: blas lapack sqlite3 fftw3
+Cflags: "-I${includedir}" 
