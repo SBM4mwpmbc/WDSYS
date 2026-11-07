@@ -2,18 +2,18 @@
 // some bot stuff is trash af so i gotta come up with some new ahh stuff
 
 // too many includes
-#include <curl.h>
-#include <json.hpp>
+#include <curl/curl.h>
+#include <nlohmann/json.hpp>
 #include <portaudio.h>
-#include <baseapi.h>
-#include <allheaders.h>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
 #include <random>
 #include <filesystem>
 #include <regex>
 #include <string>
 #include <chrono>
 #include <ctime>
-#include <objdetect.hpp>
+#include <opencv2/objdetect.hpp>
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
@@ -21,19 +21,44 @@
 #include <microphone_index.hpp>
 #include <webcam_index.hpp>
 #include <cstddef>
-#include <random>
 #include <cctype>
 #include <stdexcept>
 #include <whisper.h>
 #include <format>
-#include <dnn.hpp>
+#include <opencv2/dnn/dnn.hpp>
 #include <algorithm>
-#include <dnn.h>
-#include <frontal_face_detector.h>
-#include <image_io.h>
+#include <dlib/image_processingfrontal_face_detector.h>
+#include <dlib/image_io.h>
 #include <stdint.h>
 
+/*                "${workspaceFolder}/**",
+                "C:/vcpkg/installed/x64-windows/include",
+                "C:/vcpkg/installed/x64-windows/include/opencv4/opencv2",
+                "C:/vcpkg/installed/x64-windows/include/opencv4",
+                "C:/whisper.cpp/include",
+                "C:/whisper.cpp/",
+                "C:/vcpkg/installed/x64-windows/include/nlohmann",
+                "C:/whisper.cpp/ggml/include",
+                "C:/vcpkg/installed/x64-windows/include/curl",
+                "C:/vcpkg/installed/x64-windows/include/tesseract",
+                "C:/vcpkg/installed/x64-windows/include/leptonica",
+                "C:/vcpkg/packages/dlib_x64-windows/include/dlib",
+                "C:/vcpkg/packages/dlib_x64-windows/include/dlib/image_processing"
+*/
+
 // some namespaces and some global vars
+
+json response = requests.post("http://localhost:1234/v1/chat/completions", headers, data.dump(4));
+json headers = {
+        {"Content-Type", "application/json"}
+};  // i might change this, because i dont know the dang c++ func for this.
+
+auto now = std::chrono::system_clock::now();
+std::time_t time_now = std::chrono::system_clock::to_time_t(now);
+std::tm local_time{};
+localtime_s(&local_time, &time_now);
+std::ostringstream timestamp;
+timestamp << std::put_time(&local_time, "%Y-%m-%d %H:%M:%S");
 
 using json = nlohmann::json;
 namespace fs = std::filesystem;
@@ -53,7 +78,7 @@ struct PRSE_RESPN
 
 whisper_context_params ctx_params = whisper_context_default_params();
 
-whisper_context* ctx = whisper_init_from_file_with_params("C:\\whisper.cpp\\ggml-base.en.bin", ctx_params);
+whisper_context* ctx = whisper_init_from_file_with_params("C:\\WDSYS\\api_sys\\char_mind\\whisper.cpp\\ggml-base.en.bin", ctx_params);
 
 // load configs
 
@@ -250,12 +275,6 @@ void auto_update_memory(const char* user_input, const char* ai_reply)
 {
     json memory = load_memory();
     // some ugly stuff going on here! E
-    auto now = std::chrono::system_clock::now();
-    std::time_t time_now = std::chrono::system_clock::to_time_t(now);
-    std::tm local_time{};
-    localtime_s(&local_time, &time_now);
-    std::ostringstream timestamp;
-    timestamp << std::put_time(&local_time, "%Y-%m-%d %H:%M:%S");
 
     std::string cleaned_user_input = user_input ? trim(user_input) : "";
     std::string cleaned_ai_reply = ai_reply ? trim(ai_reply) : "";
@@ -345,16 +364,6 @@ std::string  get_chat_response(const char* user_input, const std::string& file_p
         })}
     };
 
-    json headers = {
-        {"Content-Type", "application/json"}
-    };
-
-    json response = requests.post(
-        "http://localhost:1234/v1/chat/completions",
-        headers,
-        data.dump(4)
-    );
-
     if (response.status_code == 200)
     {
         json response_json = response.json();
@@ -426,7 +435,8 @@ std::string detect_obj_from_frame()
 
   std::vector<double> class_ids;
 
-  for (const auto& detection : detections) {
+  for (const auto& detection : detections) 
+  {
     class_ids.push_back(detection.class_id);
   }
 
@@ -444,7 +454,7 @@ std::string detect_obj_from_frame()
 
   std::vector summary = {};
 
-  for (label : labels)
+  for (const auto& label : labels)
   {
     summary[label] = summary.get(label, 0)++;
   }
@@ -492,8 +502,8 @@ const char* describe_faces_in_frame()
 
       if (distance <= 0.45)
       {
-	face_matched = true;
-	break;
+		face_matched = true;
+		break;
       }
     }
 
@@ -503,7 +513,7 @@ const char* describe_faces_in_frame()
       summary[name] = summary.get(name, 0)++;
       if (name == USER_NAME)
       {
-	current_speaker = USER_NAME;
+		current_speaker = USER_NAME;
       }
     }
     else
@@ -570,7 +580,7 @@ const char* recognize_face_greeting()
 
       if (name == USER_NAME)
       {
-	std::string current_speaker = USER_NAME;
+		std::string current_speaker = USER_NAME;
       }
 
       return "Hey.. or whatever..";
@@ -665,7 +675,7 @@ std::string check_for_depart()
   }
 }
 
-int main(void)
+int BTMN(void)
 {
   config_read();
   load_known_faces();
@@ -680,13 +690,13 @@ int main(void)
 
       if (wake_text && precise_wakeword_detected())
       {
-	in_conversation = true;
-	if (current_speaker == "Unknown")
-	{
-	  current_speaker = USER_NAME;
-	}
+		in_conversation = true;
+		if (current_speaker == "Unknown")
+		{
+	  		current_speaker = USER_NAME;
+		}
 
-	printf(recognize_face_greeting());
+		printf(recognize_face_greeting());
       }
 
       continue;
@@ -699,19 +709,66 @@ int main(void)
       continue;
     }
 
-    const char* user_text_lower = user_input.lower();
+    const char* user_text_lower = user_input.tolower();
 
-    if (check_for_farewell(user_text_lower))
+    if (check_for_depart(user_text_lower))
     {
+	  cv::Mat frame = capture_webcam_frame();
+	  // do NOT do the read text, as it'll be embarrasing..
+	  
       in_conversation = false;
       current_speaker = "Unknown";
       continue;
-    }
-    else if 
+    } // below, i still dont know if it applies to actual mind, but who cares
+    else if (user_input == "What time is it?" || "What's the time?" || "What is the time right now?") // or hell
+	{
+	   cv::Mat frame = capture_webcam_frame();
+	   json response = "It is currently ", timestamp; // i dont even know if this is right lolz
+	   printf("%d\n", response);
+	   auto_update_memory(user_input, response);
+	}
+	else if (user_input == "What does this say?" || "Read this" || "Can you read this please?" || "Can you read this?")
+    {
+	    cv::Mat frame = capture_webcam_frame();
+        std::string text = read_text_from_frame(frame).trim();
+		if (text)
+        {
+          json response = "It says ", text, " or whatever.\n";
+		}
+		else
+        {
+		  json response = "There's no text there? Jeez, I hate pranks like this...\n";
+		}
+	}
+	else if (user_input == "Who do you see?" || "Who's there?" || "Who is there?" || "Is there anyone there?" || "Anyone there?")
+	{
+		cv::Mat frame = capture_webcam_frame();
+		const char* faces_desc = describe_faces_in_frame(frame);
+		printf("%d\n", faces_desc);
+		auto_update_memory(user_input, faces_desc);
+	}
+	else if (user_input == "Objects?" || "look!" || "Look!" || "Look there" || "Look over there")
+    {
+		cv::Mat frame = capture_webcam_frame();
+		const char* faces_description = describe_faces_in_frame(frame);
+		std::string obj_desc = detect_objects_from_frame(frame);
+		json response = faces_desc, "I also see ", obj_desc;
+		auto_update_memory(user_input, response);
+	}
+	else
+    {
+		json response = get_chat_response(user_input);
+		printf("%d\n", response);
+		auto_update_memory(user_input, response);
+	}
+}
 
-  
+int main(void)
+{
+	bool loop = true;
 
-
-       
-  
-
+	while (loop == true)
+    {
+		BTMN();
+	}
+}
