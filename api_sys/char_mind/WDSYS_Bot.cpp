@@ -662,7 +662,7 @@ std::string check_for_depart()
   }
 }
 
-int main(void)
+int BTMN(void)
 {
   config_read();
   load_known_faces();
@@ -737,6 +737,25 @@ int main(void)
 	else if (user_input == "Objects?" || "look!" || "Look!" || "Look there" || "Look over there")
     {
 		cv::Mat frame = capture_webcam_frame();
-		const char* describe_faces_in_frame(frame);
+		const char* faces_description = describe_faces_in_frame(frame);
 		std::string obj_desc = detect_objects_from_frame(frame);
-		json response = 
+		json response = faces_desc, "I also see ", obj_desc;
+		auto_update_memory(user_input, response);
+	}
+	else
+    {
+		json response = get_chat_response(user_input);
+		printf("%d\n", response);
+		auto_update_memory(user_input, response);
+	}
+}
+
+int main(void)
+{
+	bool loop = true;
+
+	while (loop == true)
+    {
+		BTMN();
+	}
+}
