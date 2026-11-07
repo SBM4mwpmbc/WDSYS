@@ -1,24 +1,24 @@
-**warning: intermediate geek language**
+> [!CAUTION]
+> Intermediate geek language.
 
-# WDSYS
-Welcome to the Worker Drone System (WDSYS), a somewhat replica of the Worker Drone in Murder drones!
+This is an Operating System based on Linux, that I decided to make.
 
-**Do NOT download this on your computer. Download this on the Worker Drone.**
+It's based on Murder Drones, and I'm trying to make a Murder Drone in real life. Yes, I did try to make my own kernel, but it was terrible. So I made it linux based.
 
-Official Website for WDSYS: sites.google.com/view/workerdronesys-org
-Im getting a real domain soon, dont worry.
+The /init does NOT link to the userspace yet, all there is, is a debug userspace printer. I'm working on that. Remember that.
 
-**Official manual for WDSYS (READ BEFORE USING!!!!!!!!): docs.google.com/document/d/1OCP_3A7Lx5pRSDEfnrTf0xxLS0rIci_yojpp9yWKb4s/edit?usp=sharing**
+> [!IMPORTANT]
+> Do NOT install this on a normal computer. Install this on a VM (for testing), or install it on the Worker Drone on Amazon (which has not yet been released.)
 
-A system that is the WORKER DRONE FROM MURDER DRONES IN REAL LIFE! Powered by Linux. Oh my god I love linux.
+This uses multiple open source libaries from vcpkg.
 
-# About
+WDSYS contains:
 
-WDSYS is an Operating System developed by Weird Ferb O'Fletynn, in development since August 10th, 2026. The creator is a big fan of Murder Drones, and he decided to make a whole ahh worker drone. We are happy to introduce this new concept to you.
+1. A bot (because how else are we gonna make it talk?)
+2. Linux
+3. Improved userspace (I wouldnt call it improved.)
+4. Working registry systems.
 
-This only properly works on Worker Drone PCs and motors, but using a VM is fine.
+And more.
 
-I started this idea in August 1st, 2026. I was thinking what if Uzi was in my room. I then started building this 9 days later (august 10th).
-I tried to make my own kernel, but it didnt work out, so i used Linux Kernel. I also used the PMC (Phobia Motor Controller) for the actual movement. have fun
-
-WDSYS is completely open source, and protected from GPL-3.0
+Have fun.
