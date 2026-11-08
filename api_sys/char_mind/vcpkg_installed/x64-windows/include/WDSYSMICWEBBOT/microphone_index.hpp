@@ -10,7 +10,7 @@ int microphone(void)
 
     if (err != paNoError)
     {
-        printf("PORTAUDIO INIT FAIL: %d\n", Pa_GetErrorText(err));
+        printf("PORTAUDIO INIT FAIL: %s\n", Pa_GetErrorText(err));
         return 1;
     }
 
@@ -20,7 +20,7 @@ int microphone(void)
 
     if (device_count < 0)
     {
-        printf("LIST AUDIO DEV ERR %d\n", Pa_GetErrorText(device_count));
+        printf("LIST AUDIO DEV ERR %s\n", Pa_GetErrorText(device_count));
         Pa_Terminate();
         return 1;
     }

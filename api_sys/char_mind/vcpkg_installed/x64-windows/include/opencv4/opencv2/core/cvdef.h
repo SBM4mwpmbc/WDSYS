@@ -45,7 +45,7 @@
 #ifndef OPENCV_CORE_CVDEF_H
 #define OPENCV_CORE_CVDEF_H
 
-#include "opencv2/core/version.hpp"
+#include "opencv4/opencv2/core/version.hpp"
 
 //! @addtogroup core_utils
 //! @{
@@ -187,7 +187,7 @@ namespace cv {
 #include <limits.h>
 #endif
 
-#include "opencv2/core/hal/interface.h"
+#include "opencv4/opencv2/core/hal/interface.h"
 
 #if defined __ICL
 #  define CV_ICC   __ICL
@@ -958,7 +958,7 @@ CV_INLINE int CV_FOURCC(char c1, char c2, char c3, char c4)
 //! @}
 
 #ifndef __cplusplus
-#include "opencv2/core/fast_math.hpp" // define cvRound(double)
+#include "opencv4/opencv2/core/fast_math.hpp" // define cvRound(double)
 #endif
 
 #endif // OPENCV_CORE_CVDEF_H

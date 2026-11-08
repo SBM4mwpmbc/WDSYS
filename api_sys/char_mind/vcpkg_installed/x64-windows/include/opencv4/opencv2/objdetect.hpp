@@ -44,9 +44,9 @@
 #ifndef OPENCV_OBJDETECT_HPP
 #define OPENCV_OBJDETECT_HPP
 
-#include "opencv2/core.hpp"
-#include "opencv2/objdetect/aruco_detector.hpp"
-#include "opencv2/objdetect/graphical_code_detector.hpp"
+#include "opencv4/opencv2/core.hpp"
+#include "opencv4/opencv2/objdetect/aruco_detector.hpp"
+#include "opencv4/opencv2/objdetect/graphical_code_detector.hpp"
 
 /**
 @defgroup objdetect Object Detection
@@ -932,9 +932,9 @@ public:
 //! @}
 }
 
-#include "opencv2/objdetect/detection_based_tracker.hpp"
-#include "opencv2/objdetect/face.hpp"
-#include "opencv2/objdetect/charuco_detector.hpp"
-#include "opencv2/objdetect/barcode.hpp"
+#include "opencv4/opencv2/objdetect/detection_based_tracker.hpp"
+#include "opencv4/opencv2/objdetect/face.hpp"
+#include "opencv4/opencv2/objdetect/charuco_detector.hpp"
+#include "opencv4/opencv2/objdetect/barcode.hpp"
 
 #endif

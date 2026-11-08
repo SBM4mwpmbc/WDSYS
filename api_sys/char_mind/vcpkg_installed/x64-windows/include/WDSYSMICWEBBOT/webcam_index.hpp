@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string>
-#include <opencv.hpp>
+#include <opencv4/opencv2/opencv.hpp>
 
 int test_camera_until_valid_frame(int indexx = 1, int target_frame = 35, int max_frames = 36)
 {

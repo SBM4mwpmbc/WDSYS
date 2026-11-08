@@ -13,21 +13,21 @@
 #include <string>
 #include <chrono>
 #include <ctime>
-#include <opencv2/objdetect.hpp>
+#include <opencv4/opencv2/objdetect.hpp>
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <microphone_index.hpp>
-#include <webcam_index.hpp>
+#include <WDSYSMICWEBBOT/microphone_index.hpp>
+#include <WDSYSMICWEBBOT/webcam_index.hpp>
 #include <cstddef>
 #include <cctype>
 #include <stdexcept>
 #include <whisper.h>
 #include <format>
-#include <opencv2/dnn/dnn.hpp>
+#include <opencv4/opencv2/dnn/dnn.hpp>
 #include <algorithm>
-#include <dlib/image_processingfrontal_face_detector.h>
+#include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_io.h>
 #include <stdint.h>
 

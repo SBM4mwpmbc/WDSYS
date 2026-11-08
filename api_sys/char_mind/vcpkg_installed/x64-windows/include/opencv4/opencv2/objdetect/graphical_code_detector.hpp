@@ -4,7 +4,7 @@
 #ifndef OPENCV_OBJDETECT_GRAPHICAL_CODE_DETECTOR_HPP
 #define OPENCV_OBJDETECT_GRAPHICAL_CODE_DETECTOR_HPP
 
-#include <opencv2/core.hpp>
+#include <opencv4/opencv2/core.hpp>
 
 namespace cv {
 
