@@ -1,5 +1,6 @@
 // this system is based on ImDaGoatCreates' Cyn_AI python project
 // some bot stuff is trash af so i gotta come up with some new ahh stuff
+#pragma message("Compile using the DLIB and VCPKG x64 win library with c++20")
 
 // too many includes
 #include <curl/curl.h>
@@ -80,6 +81,26 @@ whisper_context_params ctx_params = whisper_context_default_params();
 
 whisper_context* ctx = whisper_init_from_file_with_params("C:\\WDSYS\\api_sys\\char_mind\\whisper.cpp\\ggml-base.en.bin", ctx_params);
 
+std::string dev_mode(void)
+{
+}
+
+#ifdef dev_mode_enable
+	std::cout << "[WDSYS_BOT[SYS]] Entering developer mode at CONFIG value " << DEV_MODE << ". Please enter the Developer Password to continue.\n";
+	std::cin >> DEVPASSBOT;
+
+	if (DEVPASSBOT == "WDSYSBOTDEVCONF")
+	{
+		printf("Entering...\n"");
+		dev_mode();
+	}
+	else
+	{
+		printf("DEV pass wrong. Exiting...\n"):
+		return;
+	}
+#endif
+
 // load configs
 
 json configread(void)
@@ -97,13 +118,17 @@ json configread(void)
 
     std::vector<std::string> WAKE_WORDS = CONFIG.value("wake_words", std::vector<std::string>{});
     std::vector<std::string> WAKE_PREFIXES = CONFIG.value("wake_prefixes", std::vector<std::string>{"", "ok ", "hay ", "hey "});
+	std::vector<std::string> DEV_MODE = CONFIG.value("dev", std::vector<std::string>{"false"});
 
     std::string USER_NAME = CONFIG.at("user_name").get<std::string>();
 
+	if (DEV_MODE == "true")
+	{
+		#define dev_mode_enable
+	}
+
     return CONFIG;
 }
-
-
 
 // global var
 std::vector<dlib::matrix<float, 0, 1>> known_face_encodings;
@@ -341,7 +366,7 @@ json load_system_prompt(const std::string& file_path = "personality.json")
     }
 }
 
-std::string  get_chat_response(const char* user_input, const std::string& file_path = "personality.json")
+std::string get_chat_response(const char* user_input, const std::string& file_path = "personality.json")
 {
     json system_prompt_content = load_system_prompt(file_path);
 
