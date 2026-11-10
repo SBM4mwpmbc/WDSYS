@@ -52,10 +52,13 @@
 
 // some namespaces and some global vars
 
-json response = requests.post("http://localhost:1234/v1/chat/completions", headers, data.dump(4));
-json headers = {
-        {"Content-Type", "application/json"}
-};  // i might change this, because i dont know the dang c++ func for this.
+const char* base_url = "localhost";
+int port = 8900;
+
+httplib::Client client(base_url, port);
+auto res = client.Get("/api/generate", user_input, "application/json");
+
+json response = res;
 
 auto now = std::chrono::system_clock::now();
 std::time_t time_now = std::chrono::system_clock::to_time_t(now);
