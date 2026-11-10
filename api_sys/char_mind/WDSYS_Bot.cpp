@@ -33,6 +33,7 @@
 #include <dlib/image_io.h>
 #include <stdint.h>
 #include <cstdio>
+#include <httplib/httplib.h>
 
 /*                "${workspaceFolder}/**",
                 "C:/vcpkg/installed/x64-windows/include",
