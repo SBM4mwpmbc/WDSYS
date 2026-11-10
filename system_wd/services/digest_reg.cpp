@@ -207,10 +207,7 @@ static std::string trim(const std::string& text)
     return text.substr(start, end - start + 1);
 }
 
-static bool starts_with(
-    const std::string& text,
-    const std::string& prefix
-)
+static bool starts_with(const std::string& text, const std::string& prefix)
 {
     return text.compare(0, prefix.length(), prefix) == 0;
 }
@@ -279,11 +276,7 @@ static const DigestItem* find_item_const(const char* name)
     return nullptr;
 }
 
-static int copy_string(
-    const std::string& source,
-    char* buffer,
-    unsigned long buffer_size
-)
+static int copy_string(const std::string& source, char* buffer, unsigned long buffer_size)
 {
     if (buffer == nullptr || buffer_size == 0)
     {
@@ -296,32 +289,19 @@ static int copy_string(
         return WD_DIGEST_STORAGE_ERROR;
     }
 
-    std::memcpy(
-        buffer,
-        source.c_str(),
-        source.size() + 1
-    );
+    std::memcpy(buffer, source.c_str(), source.size() + 1);
 
     return WD_DIGEST_SUCCESS;
 }
 
-static int copy_int(
-    int value,
-    char* buffer,
-    unsigned long buffer_size
-)
+static int copy_int(int value, char* buffer, unsigned long buffer_size)
 {
     if (buffer == nullptr || buffer_size == 0)
     {
         return WD_DIGEST_INVALID_VALUE;
     }
 
-    int written = std::snprintf(
-        buffer,
-        buffer_size,
-        "%d",
-        value
-    );
+    int written = std::snprintf(buffer, buffer_size, "%d", value);
 
     if (written < 0)
     {
@@ -401,28 +381,14 @@ static void remove_expired_effects(void)
 {
     std::time_t now = std::time(nullptr);
 
-    g_effects.erase(
-        std::remove_if(g_effects.begin(), g_effects.end(), [&](const DigestEffect& effect)
-        {
-           return effect.expires <= now;
-        }
-    ),
-    g_effects.end()
-    );
+    g_effects.erase(std::remove_if(g_effects.begin(), g_effects.end(), [&](const DigestEffect& effect){ return effect.expires <= now; }), g_effects.end());
 }
 
 static void remove_expired_moods(void)
 {
     std::time_t now = std::time(nullptr);
 
-    g_moods.erase(
-        std::remove_if(g_moods.begin(), g_moods.end(), [&](const DigestMood& mood)
-        {
-            return mood.expires <= now;
-        }
-    ),
-    g_moods.end()
-    );
+    g_moods.erase(std::remove_if(g_moods.begin(), g_moods.end(), [&](const DigestMood& mood){ return mood.expires <= now; }), g_moods.end());
 }
 
 static void check_expiration(void)
@@ -658,11 +624,7 @@ int wd_digest_remove_item(const char* name)
         return WD_DIGEST_INVALID_ITEM;
     }
 
-    auto iterator = std::find_if(g_items.begin(), g_items.end(), [&](const DigestItem& item)
-    {
-        return item.name == name;
-    }
-    );
+    auto iterator = std::find_if(g_items.begin(), g_items.end(), [&](const DigestItem& item){ return item.name == name; });
 
     if (iterator == g_items.end())
     {
@@ -791,11 +753,7 @@ int wd_digest_get_category(const char* name)
     return item->category;
 }
 
-int wd_digest_get_effect(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_effect(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -812,11 +770,7 @@ int wd_digest_get_effect(
     return copy_string(item->effect, buffer, buffer_size);
 }
 
-int wd_digest_get_mood(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_mood(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -833,11 +787,7 @@ int wd_digest_get_mood(
     return copy_string(item->mood, buffer, buffer_size);
 }
 
-int wd_digest_get_sugar(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_sugar(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -854,11 +804,7 @@ int wd_digest_get_sugar(
     return copy_int(item->sugar, buffer, buffer_size);
 }
 
-int wd_digest_get_energy(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_energy(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -875,11 +821,7 @@ int wd_digest_get_energy(
     return copy_int(item->energy, buffer, buffer_size);
 }
 
-int wd_digest_get_hydration(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_hydration(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -896,11 +838,7 @@ int wd_digest_get_hydration(
     return copy_int(item->hydration, buffer, buffer_size);
 }
 
-int wd_digest_get_fullness(
-    const char* name,
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_fullness(const char* name, char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -919,10 +857,7 @@ int wd_digest_get_fullness(
 
 // WAY FUCKING longer than i expected
 
-int wd_digest_get_current_item(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_current_item(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -932,10 +867,7 @@ int wd_digest_get_current_item(
     return copy_string(g_current_item, buffer, buffer_size);
 }
 
-int wd_digest_get_current_effect(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_current_effect(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -947,9 +879,7 @@ int wd_digest_get_current_effect(
     return copy_string(g_current_effect, buffer, buffer_size);
 }
 
-int wd_digest_get_current_mood(
-    char* buffer,
-    unsigned long buffer_size
+int wd_digest_get_current_mood(char* buffer, unsigned long buffer_size
 )
 {
     if (!g_initialized)
@@ -962,10 +892,7 @@ int wd_digest_get_current_mood(
     return copy_string(g_current_mood, buffer, buffer_size);
 }
 
-int wd_digest_get_current_sugar(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_current_sugar(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -975,9 +902,7 @@ int wd_digest_get_current_sugar(
     return copy_int(g_current_sugar, buffer, buffer_size);
 }
 
-int wd_digest_get_current_energy(
-    char* buffer,
-    unsigned long buffer_size
+int wd_digest_get_current_energy(char* buffer, unsigned long buffer_size
 )
 {
     if (!g_initialized)
@@ -988,10 +913,7 @@ int wd_digest_get_current_energy(
     return copy_int(g_current_energy, buffer, buffer_size);
 }
 
-int wd_digest_get_current_hydration(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_current_hydration(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -1001,10 +923,7 @@ int wd_digest_get_current_hydration(
     return copy_int(g_current_hydration, buffer, buffer_size);
 }
 
-int wd_digest_get_current_fullness(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_current_fullness(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -1086,10 +1005,7 @@ static void print_moods(void)
     }
 }
 
-int wd_digest_get_state_summary(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_state_summary(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -1098,26 +1014,7 @@ int wd_digest_get_state_summary(
 
     check_expiration();
 
-    int written = std::snprintf(
-        buffer,
-        buffer_size,
-
-        "ITEM=%s | "
-        "EFFECT=%s | "
-        "MOOD=%s | "
-        "SUGAR=%d | "
-        "ENERGY=%d | "
-        "HYDRATION=%d | "
-        "FULLNESS=%d | ",
-
-        g_current_item.c_str(),
-        g_current_effect.c_str(),
-        g_current_mood.c_str(),
-        g_current_sugar,
-        g_current_energy,
-        g_current_hydration,
-        g_current_fullness
-    );
+    int written = std::snprintf(buffer, buffer_size, "ITEM=%s | ", "EFFECT=%s | ", "MOOD=%s | ", "SUGAR=%d | ", "ENERGY=%d | ", "HYDRATION=%d | ", "FULLNESS=%d | ", g_current_item.c_str(), g_current_effect.c_str(), g_current_mood.c_str(), g_current_sugar, g_current_energy, g_current_hydration, g_current_fullness);
 
     if (written < 0)
     {
@@ -1138,10 +1035,7 @@ int wd_digest_get_state_summary(
     return WD_DIGEST_SUCCESS;
 }
 
-int wd_digest_get_character_message(
-    char* buffer,
-    unsigned long buffer_size
-)
+int wd_digest_get_character_message(char* buffer, unsigned long buffer_size)
 {
     if (!g_initialized)
     {
@@ -1205,17 +1099,7 @@ static void print_items(void)
 
     for (const auto& item : g_items)
     {
-        printf(" %s [%s] | Effect=%s | Mood=%s | Sugar=%d | Energy=%d | Hydration=%d | Fullness=%d\n",
-
-            item.name.c_str(),
-            item.category_code.c_str(),
-            item.effect.c_str(),
-            item.mood.c_str(),
-            item.sugar,
-            item.energy,
-            item.hydration,
-            item.fullness
-        );
+        printf(" %s [%s] | Effect=%s | Mood=%s | Sugar=%d | Energy=%d | Hydration=%d | Fullness=%d\n", item.name.c_str(), item.category_code.c_str(), item.effect.c_str(), item.mood.c_str(), item.sugar, item.energy, item.hydration, item.fullness);
     }
 }
 
@@ -1264,38 +1148,32 @@ static void process_command(const std::string& command)
     {
         return;
     }
-
-    if (input == "HELP")
+    else if (input == "HELP")
     {
         print_help();
         return;
     }
-
-    if (input == "STATUS")
+    else if (input == "STATUS")
     {
         print_status();
         return;
     }
-
-    if (input == "LIST")
+    else if (input == "LIST")
     {
         print_items();
         return;
     }
-
-    if (input == "EFFECTS")
+    else if (input == "EFFECTS")
     {
         print_effects();
         return;
     }
-
-    if (input == "MOODS")
+    else if (input == "MOODS")
     {
         print_moods();
         return;
     }
-
-    if (input == "CHECK")
+    else if (input == "CHECK")
     {
         check_expiration();
         save_registry();
@@ -1303,24 +1181,21 @@ static void process_command(const std::string& command)
         printf("[DIGEST] Expiration check complete.\n");
         return;
     }
-
-    if (input == "RESET")
+    else if (input == "RESET")
     {
         wd_digest_reset_effects();
 
         printf("[DIGEST] Effects and moods reset.\n");
         return;
     }
-
-    if (input == "CLEAR")
+    else if (input == "CLEAR")
     {
         wd_digest_clear_state();
 
         printf("[DIGEST] State cleared.\n");
         return;
     }
-    
-    if (input == "SAVE")
+    else if (input == "SAVE")
     {
         int result = save_registry();
 
@@ -1335,8 +1210,7 @@ static void process_command(const std::string& command)
 
         return;
     }
-
-    if (starts_with(input, "CONSUME "))
+    else if (starts_with(input, "CONSUME "))
     {
         std::string name = trim(input.substr(8));
 
@@ -1353,16 +1227,17 @@ static void process_command(const std::string& command)
         
         return;
     }
-
-    if (starts_with(input, "GET "))
+    else if (starts_with(input, "GET "))
     {
         std::string name = trim(input.substr(4));
 
         print_item(name);
         return;
     }
-
-    printf("[DIGEST] Unknown command: %s\n", input.c_str());
+    else
+    {
+        printf("[DIGEST] Unknown command: %s\n", input.c_str());
+    }
 }
 
 int main(void)
