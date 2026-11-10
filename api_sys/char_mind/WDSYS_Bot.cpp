@@ -32,6 +32,7 @@
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_io.h>
 #include <stdint.h>
+#include <cstdio>
 
 /*                "${workspaceFolder}/**",
                 "C:/vcpkg/installed/x64-windows/include",
@@ -256,7 +257,7 @@ json load_memory(void)
 
 // trim helper
 
-std::string trim(const std::string& input)
+static std::string trim(const std::string& input)
 {
     const size_t start = input.find_first_not_of(" \t\n\r");
 
