@@ -75,12 +75,6 @@ std::string MEMORY_FILE = "mrmy.json";
 const char* whisper = "whisper.h";
 cv::Mat frame;
 
-struct PRSE_RESPN
-{
-    std::string dialogue;
-    std::vector<std::string> actions;
-};
-
 // whisper context params
 
 whisper_context_params ctx_params = whisper_context_default_params();
@@ -347,6 +341,27 @@ json load_system_prompt(const std::string& file_path = "personality.json")
     }
 }
 
+json parse_line(PRSE_RESPN)
+{
+	json dialogue;
+	bool instext = false;
+
+	for (int c : response)
+    {
+		if (c == '*')
+        {
+			instext = !instext;
+			continue;
+		}
+
+		if (!instext)
+        {
+			dialogue += c;
+		}
+	}
+	return dialogue;
+}
+
 std::string get_chat_response(const char* user_input, const std::string& file_path = "personality.json")
 {
     json system_prompt_content = load_system_prompt(file_path);
@@ -373,7 +388,14 @@ std::string get_chat_response(const char* user_input, const std::string& file_pa
     if (response.status_code == 200)
     {
         json response_json = response.json();
-        return response_json["choices"][0]["message"]["content"].get<std::string>();
+		if (response_json.find('*') != std::string::npos)
+		{
+			parse_line();
+		}
+		else
+		{
+			return response_json["choices"][0]["message"]["content"].get<std::string>();
+		}
     }
     else
     {
