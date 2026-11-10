@@ -1,6 +1,7 @@
 // this system is based on ImDaGoatCreates' Cyn_AI python project
 // some bot stuff is trash af so i gotta come up with some new ahh stuff
 #pragma message("Compile using the DLIB and VCPKG x64 win library with c++20")
+#pragma message("TODO: Get Asterik Parser in chat response")
 
 // too many includes
 #include <curl/curl.h>
@@ -79,27 +80,7 @@ struct PRSE_RESPN
 
 whisper_context_params ctx_params = whisper_context_default_params();
 
-whisper_context* ctx = whisper_init_from_file_with_params("C:\\WDSYS\\api_sys\\char_mind\\whisper.cpp\\ggml-base.en.bin", ctx_params);
-
-std::string dev_mode(void)
-{
-}
-
-#ifdef dev_mode_enable
-	std::cout << "[WDSYS_BOT[SYS]] Entering developer mode at CONFIG value " << DEV_MODE << ". Please enter the Developer Password to continue.\n";
-	std::cin >> DEVPASSBOT;
-
-	if (DEVPASSBOT == "WDSYSBOTDEVCONF")
-	{
-		printf("Entering...\n"");
-		dev_mode();
-	}
-	else
-	{
-		printf("DEV pass wrong. Exiting...\n"):
-		return;
-	}
-#endif
+whisper_context* ctx = whisper_init_from_file_with_params("C:\\WDSYS\\api_sys\\char_mind\\whisper\\ggml-base.en.bin", ctx_params);
 
 // load configs
 
@@ -121,11 +102,6 @@ json configread(void)
 	std::vector<std::string> DEV_MODE = CONFIG.value("dev", std::vector<std::string>{"false"});
 
     std::string USER_NAME = CONFIG.at("user_name").get<std::string>();
-
-	if (DEV_MODE == "true")
-	{
-		#define dev_mode_enable
-	}
 
     return CONFIG;
 }
@@ -527,8 +503,8 @@ const char* describe_faces_in_frame()
 
       if (distance <= 0.45)
       {
-		face_matched = true;
-		break;
+	face_matched = true;
+	break;
       }
     }
 
@@ -709,19 +685,19 @@ int BTMN(void)
 
   while (true)
   {
-    if (!in_coversation)
+    if (in_coversation == true)
     {
       std::string wake_text = hybrid_recognize_speech(double timeout = 0, double phrase_time_limit = 6);
 
       if (wake_text && precise_wakeword_detected())
       {
-		in_conversation = true;
-		if (current_speaker == "Unknown")
-		{
-	  		current_speaker = USER_NAME;
-		}
+	in_conversation = true;
+	if (current_speaker == "Unknown")
+	{
+	  current_speaker = USER_NAME;
+	}
 
-		printf(recognize_face_greeting());
+	printf(recognize_face_greeting());
       }
 
       continue;

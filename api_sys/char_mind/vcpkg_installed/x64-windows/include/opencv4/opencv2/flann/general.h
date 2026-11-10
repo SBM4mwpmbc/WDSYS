@@ -31,13 +31,13 @@
 #ifndef OPENCV_FLANN_GENERAL_H_
 #define OPENCV_FLANN_GENERAL_H_
 
-#include "opencv2/core/version.hpp"
+#include "opencv4/opencv2/core/version.hpp"
 
 #if CV_VERSION_MAJOR <= 4
 
 //! @cond IGNORED
 
-#include "opencv2/core.hpp"
+#include "opencv4/opencv2/core.hpp"
 
 namespace cvflann
 {

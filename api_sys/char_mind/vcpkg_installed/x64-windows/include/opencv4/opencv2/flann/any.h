@@ -14,13 +14,13 @@
 
 //! @cond IGNORED
 
-#include "defines.h"
+#include "opencv4/opencv2/flann/defines.h"
 #include <stdexcept>
 #include <ostream>
 #include <typeinfo>
 
-#include "opencv2/core/cvdef.h"
-#include "opencv2/core/utility.hpp"
+#include "opencv4/opencv2/core/cvdef.h"
+#include "opencv4/opencv2/core/utility.hpp"
 
 namespace cvflann
 {
