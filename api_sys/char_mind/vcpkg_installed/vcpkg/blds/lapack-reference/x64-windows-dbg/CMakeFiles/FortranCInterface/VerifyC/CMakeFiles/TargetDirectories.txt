@@ -1,0 +1,4 @@
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC/CMakeFiles/VerifyFortran.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC/CMakeFiles/VerifyFortranC.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC/CMakeFiles/edit_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC/CMakeFiles/rebuild_cache.dir

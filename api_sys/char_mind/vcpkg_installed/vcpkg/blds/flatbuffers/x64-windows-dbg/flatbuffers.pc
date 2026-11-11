@@ -1,0 +1,9 @@
+libdir=C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/flatbuffers_x64-windows/debug/lib
+includedir=C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/flatbuffers_x64-windows/debug/include
+
+Name: FlatBuffers
+Description: Memory Efficient Serialization Library
+Version: 25.12.19
+
+Libs: -L${libdir} -lflatbuffers
+Cflags: -I${includedir}

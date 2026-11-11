@@ -1,0 +1,10 @@
+# ninja log v7
+26	141	8161212288919207	CMakeFiles/VerifyFortranC.dir/main.c.obj	98a56a69b77f9651
+8	164	8161212288759214	CMakeFiles/VerifyFortran.dir/VerifyFortran.f-pp.f	92c2e18e0e5dad09
+8	164	8161212288759214	CMakeFiles/VerifyFortran.dir/VerifyFortran.f.obj.ddi	92c2e18e0e5dad09
+165	218	8161212290797040	CMakeFiles/VerifyFortran.dir/Fortran.dd	39e31c732489cfe5
+165	218	8161212290797040	CMakeFiles/VerifyFortran.dir/FortranModules.json	39e31c732489cfe5
+36	245	8161212289033653	CMakeFiles/VerifyFortranC.dir/VerifyC.c.obj	353f97a798077241
+228	316	8161212290971370	CMakeFiles/VerifyFortran.dir/VerifyFortran.f.obj	672f8405b626bac5
+316	431	8161212291837220	libVerifyFortran.a	a6d2fc038d8c0cd2
+431	592	8161212292981295	VerifyFortranC.exe	61652acbfd1fa2ee

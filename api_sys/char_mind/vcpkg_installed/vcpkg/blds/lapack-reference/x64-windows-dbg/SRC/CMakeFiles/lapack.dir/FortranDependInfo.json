@@ -1,0 +1,50 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC",
+	"dir-cur-src" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/src/v3.12.1-a9de798250.clean/SRC",
+	"dir-top-bld" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg",
+	"dir-top-src" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/src/v3.12.1-a9de798250.clean",
+	"exports" : 
+	[
+		{
+			"cxx-module-info-dir" : "",
+			"destination" : "lib/cmake/lapack-3.12.0",
+			"export-name" : "lapack",
+			"export-prefix" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/Export/a2d1a47b6bf3ebffe4b48f687b343206",
+			"filesystem-export-name" : "lapack",
+			"install" : true,
+			"namespace" : ""
+		},
+		{
+			"cxx-module-info-dir" : "",
+			"destination" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg",
+			"export-name" : "lapack",
+			"export-prefix" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg",
+			"filesystem-export-name" : "lapack",
+			"install" : false,
+			"namespace" : ""
+		}
+	],
+	"forward-modules-from-target-dirs" : 
+	[
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC/CMakeFiles/mod_files.dir",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC/CMakeFiles/lapack_obj.dir"
+	],
+	"include-dirs" : [],
+	"language" : "Fortran",
+	"linked-target-dirs" : 
+	[
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC/CMakeFiles/mod_files.dir",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC/CMakeFiles/lapack_obj.dir"
+	],
+	"module-dir" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/SRC",
+	"sources" : {},
+	"submodule-ext" : ".smod",
+	"submodule-sep" : "@"
+}

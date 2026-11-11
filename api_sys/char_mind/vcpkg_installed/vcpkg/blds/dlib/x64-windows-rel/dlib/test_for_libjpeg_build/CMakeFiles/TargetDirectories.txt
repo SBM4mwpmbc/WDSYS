@@ -1,0 +1,3 @@
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-rel/dlib/test_for_libjpeg_build/CMakeFiles/libjpeg_test.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-rel/dlib/test_for_libjpeg_build/CMakeFiles/edit_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-rel/dlib/test_for_libjpeg_build/CMakeFiles/rebuild_cache.dir

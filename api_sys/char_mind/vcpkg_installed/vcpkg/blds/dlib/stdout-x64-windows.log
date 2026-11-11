@@ -1,0 +1,17 @@
+-- Note: dlib only supports static library linkage. Building static library.
+Downloading https://github.com/davisking/dlib/archive/v20.0.1.tar.gz -> davisking-dlib-v20.0.1.tar.gz
+Successfully downloaded davisking-dlib-v20.0.1.tar.gz
+-- Extracting source C:/Users/Reuben/AppData/Local/vcpkg/downloads/davisking-dlib-v20.0.1.tar.gz
+-- Applying patch fix-dependencies.patch
+-- Applying patch fix-flags.patch
+-- Using source at C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/src/v20.0.1-28a03c1bc0.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/dlib_x64-windows/lib/pkgconfig/dlib-1.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/dlib_x64-windows/debug/lib/pkgconfig/dlib-1.pc
+-- Installing: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/dlib_x64-windows/share/dlib/copyright
+-- Performing post-build validation

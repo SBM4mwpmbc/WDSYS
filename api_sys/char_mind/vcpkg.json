@@ -6,6 +6,7 @@
     "opencv4",
     "portaudio",
     "tesseract",
-    "whisper-cpp"
+    "whisper-cpp",
+    "cpp-httplib"
   ]
 }

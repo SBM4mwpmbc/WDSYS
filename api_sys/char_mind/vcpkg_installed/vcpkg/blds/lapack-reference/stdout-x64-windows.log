@@ -1,0 +1,39 @@
+Downloading https://github.com/Reference-LAPACK/lapack/archive/v3.12.1.tar.gz -> Reference-LAPACK-lapack-v3.12.1.tar.gz
+Successfully downloaded Reference-LAPACK-lapack-v3.12.1.tar.gz
+-- Extracting source C:/Users/Reuben/AppData/Local/vcpkg/downloads/Reference-LAPACK-lapack-v3.12.1.tar.gz
+-- Applying patch cmake-config.patch
+-- Applying patch fix_prefix.patch
+-- Applying patch implicit-link.patch
+-- Using source at C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/src/v3.12.1-a9de798250.clean
+-- Using MinGW gfortran; set VCPKG_PROVIDED_FORTRAN=OFF if supplying Fortran from your toolchain
+-- Using cached msys2-mingw-w64-x86_64-gcc-fortran-15.2.0-8-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-gcc-15.2.0-8-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-gcc-libgfortran-15.2.0-8-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-gcc-libs-15.2.0-8-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-gmp-6.3.0-2-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-isl-0.27-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-libwinpthread-13.0.0.r391.g848cce552-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-mpc-1.3.1-2-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-mpfr-4.2.2-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-zlib-1.3.1-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-zstd-1.5.7-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-binutils-2.45.1-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-crt-13.0.0.r391.g848cce552-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-headers-13.0.0.r391.g848cce552-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-windows-default-manifest-6.4-4-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-winpthreads-13.0.0.r391.g848cce552-1-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-gettext-runtime-0.26-2-any.pkg.tar.zst
+-- Using cached msys2-mingw-w64-x86_64-libiconv-1.18-1-any.pkg.tar.zst
+-- Using msys root at C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/msys2/9cd76c9c31f4f931
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/lapack-reference_x64-windows/lib/pkgconfig/lapack.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/lapack-reference_x64-windows/debug/lib/pkgconfig/lapack.pc
+-- Installing: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/lapack-reference_x64-windows/share/lapack-reference/usage
+-- Installing: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/lapack-reference_x64-windows/share/lapack-reference/copyright
+-- Performing post-build validation

@@ -1,0 +1,17 @@
+-- Note: flatbuffers only supports static library linkage. Building static library.
+Downloading https://github.com/google/flatbuffers/archive/v25.12.19.tar.gz -> google-flatbuffers-v25.12.19.tar.gz
+Successfully downloaded google-flatbuffers-v25.12.19.tar.gz
+-- Extracting source C:/Users/Reuben/AppData/Local/vcpkg/downloads/google-flatbuffers-v25.12.19.tar.gz
+-- Applying patch fix-uwp-build.patch
+-- Applying patch fix-runtime-flags-msvc.patch
+-- Using source at C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/flatbuffers/src/v25.12.19-11c3cd22c1.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/flatbuffers_x64-windows/lib/pkgconfig/flatbuffers.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/flatbuffers_x64-windows/debug/lib/pkgconfig/flatbuffers.pc
+-- Installing: C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/flatbuffers_x64-windows/share/flatbuffers/copyright
+-- Performing post-build validation

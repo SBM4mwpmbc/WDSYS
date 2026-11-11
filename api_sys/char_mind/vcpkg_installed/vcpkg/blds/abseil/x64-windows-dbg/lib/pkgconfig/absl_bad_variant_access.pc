@@ -1,0 +1,12 @@
+prefix=C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/abseil_x64-windows/debug
+exec_prefix=${prefix}
+libdir=C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/abseil_x64-windows/debug/lib
+includedir=C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/abseil_x64-windows/debug/include
+
+Name: absl_bad_variant_access
+Description: Abseil bad_variant_access library
+URL: https://abseil.io/
+Version: 20260107
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir}

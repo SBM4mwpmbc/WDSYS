@@ -1,0 +1,29 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/base/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/algorithm/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/cleanup/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/container/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/crc/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/debugging/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/flags/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/functional/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/hash/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/log/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/memory/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/meta/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/numeric/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/profiling/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/random/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/status/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/strings/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/synchronization/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/time/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/types/cmake_install.cmake",
+		"C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/abseil/x64-windows-rel/absl/utility/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

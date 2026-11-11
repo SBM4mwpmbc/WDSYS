@@ -1,0 +1,32 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Release",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC",
+	"dir-cur-src" : "C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/cmake-4.4.0-windows/cmake-4.4.0-windows-x86_64/share/cmake-4.4/Modules/FortranCInterface/Verify",
+	"dir-top-bld" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC",
+	"dir-top-src" : "C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/cmake-4.4.0-windows/cmake-4.4.0-windows-x86_64/share/cmake-4.4/Modules/FortranCInterface/Verify",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"."
+	],
+	"language" : "Fortran",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/VerifyC",
+	"sources" : 
+	{
+		"CMakeFiles/VerifyFortran.dir/VerifyFortran.f.obj" : 
+		{
+			"language" : "Fortran",
+			"source" : "C:/Users/Reuben/AppData/Local/vcpkg/downloads/tools/cmake-4.4.0-windows/cmake-4.4.0-windows-x86_64/share/cmake-4.4/Modules/FortranCInterface/Verify/VerifyFortran.f"
+		}
+	},
+	"submodule-ext" : ".smod",
+	"submodule-sep" : "@"
+}

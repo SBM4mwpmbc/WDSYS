@@ -1,0 +1,15 @@
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/package.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/package_source.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/edit_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/list_install_components.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/install.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/CMakeFiles/install/local.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/dlib.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/package.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/package_source.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/edit_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/rebuild_cache.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/list_install_components.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/install.dir
+C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/dlib/x64-windows-dbg/dlib/CMakeFiles/install/local.dir
