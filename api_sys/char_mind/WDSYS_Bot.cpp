@@ -35,21 +35,6 @@
 #include <cstdio>
 #include <httplib/httplib.h>
 
-/*                "${workspaceFolder}/**",
-                "C:/vcpkg/installed/x64-windows/include",
-                "C:/vcpkg/installed/x64-windows/include/opencv4/opencv2",
-                "C:/vcpkg/installed/x64-windows/include/opencv4",
-                "C:/whisper.cpp/include",
-                "C:/whisper.cpp/",
-                "C:/vcpkg/installed/x64-windows/include/nlohmann",
-                "C:/whisper.cpp/ggml/include",
-                "C:/vcpkg/installed/x64-windows/include/curl",
-                "C:/vcpkg/installed/x64-windows/include/tesseract",
-                "C:/vcpkg/installed/x64-windows/include/leptonica",
-                "C:/vcpkg/packages/dlib_x64-windows/include/dlib",
-                "C:/vcpkg/packages/dlib_x64-windows/include/dlib/image_processing"
-*/
-
 // some namespaces and some global vars
 
 const char* base_url = "localhost";
@@ -246,7 +231,7 @@ json load_memory(void)
 
         return memory.is_array() ? memory : json::array();
     }
-    catch(const std::exception& e)
+    catch (const std::exception& e)
     {
         return json::array();
     }
@@ -385,6 +370,9 @@ std::string get_chat_response(const char* user_input, const std::string& file_pa
         })}
     };
 
+	auto res = client.Get("/api/generate", user_input, "application/json");
+	json response = res;
+	
     if (response.status_code == 200)
     {
         json response_json = response.json();
