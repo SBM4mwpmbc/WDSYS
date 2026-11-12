@@ -1,6 +1,0 @@
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/include/httplib.h
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/lib/cmake/httplib/httplibConfig.cmake
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/lib/cmake/httplib/httplibConfigVersion.cmake
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/lib/cmake/httplib/httplibTargets.cmake
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/share/doc/httplib/README.md
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/pkgs/cpp-httplib_x64-windows/share/licenses/httplib/LICENSE

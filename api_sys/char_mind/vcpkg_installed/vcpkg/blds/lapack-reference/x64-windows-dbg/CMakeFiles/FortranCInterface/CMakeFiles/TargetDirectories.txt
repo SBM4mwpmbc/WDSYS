@@ -1,5 +1,0 @@
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/CMakeFiles/myfort.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/CMakeFiles/symbols.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/CMakeFiles/FortranCInterface.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/CMakeFiles/edit_cache.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/lapack-reference/x64-windows-dbg/CMakeFiles/FortranCInterface/CMakeFiles/rebuild_cache.dir

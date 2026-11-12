@@ -1,7 +1,0 @@
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/package.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/package_source.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/edit_cache.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/rebuild_cache.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/list_install_components.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/install.dir
-C:/Users/Reuben/WDSYS/api_sys/char_mind/vcpkg_installed/vcpkg/blds/cpp-httplib/x64-windows-rel/CMakeFiles/install/local.dir

@@ -1,9 +1,0 @@
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/DictionaryLookup" -> "../../../../tests/DictionaryLookup".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/MyGame" -> "../../../../tests/MyGame".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/NamespaceA" -> "../../../../tests/namespace_test/NamespaceA".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/NamespaceC" -> "../../../../tests/namespace_test/NamespaceC".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/optional_scalars" -> "../../../../tests/optional_scalars".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/java/src/test/java/union_vector" -> "../../../../tests/union_vector".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/tests/ts/bazel_repository_test_dir/.npmrc" -> "../../../.npmrc".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/ts/package.json" -> "../package.json".
-cmake -E tar: warning: skipping symbolic link "flatbuffers-25.12.19/ts/pnpm-lock.yaml" -> "../pnpm-lock.yaml".
