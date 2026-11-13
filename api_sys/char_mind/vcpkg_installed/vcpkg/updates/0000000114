@@ -1,0 +1,9 @@
+Package: lapack
+Version: 2023-06-10
+Port-Version: 5
+Depends: lapack-reference, vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1cba9f6fe3959421ea9ef2aae96b4f2876f24afe0957fc39cbea5780a6a0e3c8
+Description: Metapackage for packages which provide LAPACK
+Status: purge ok half-installed

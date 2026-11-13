@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: dshow
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable DirectShow
+Status: install ok half-installed

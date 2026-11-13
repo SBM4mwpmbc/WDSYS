@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: gapi
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable gapi module
+Status: purge ok half-installed

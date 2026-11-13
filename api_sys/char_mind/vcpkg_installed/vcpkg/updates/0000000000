@@ -1,0 +1,8 @@
+Package: whisper-cpp
+Version: 1.8.6
+Depends: ggml, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 12d8997ff6b57ca550424d882b067dabab53a2c12f6b3c00b0f760dda638d835
+Description: Port of OpenAI's Whisper model in C/C++
+Status: purge ok half-installed

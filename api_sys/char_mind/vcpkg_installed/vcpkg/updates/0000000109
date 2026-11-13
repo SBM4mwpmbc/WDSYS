@@ -1,0 +1,7 @@
+Package: dlib
+Feature: sqlite3
+Depends: sqlite3
+Architecture: x64-windows
+Multi-Arch: same
+Description: sqlite3 support for dlib
+Status: purge ok half-installed

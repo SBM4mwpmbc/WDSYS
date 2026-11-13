@@ -1,0 +1,8 @@
+Package: utf8-range
+Version: 7.36.2
+Depends: abseil, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d42b829f8c031d4477136aaaf8483078d33e5b135c6b50667616b59471af055c
+Description: Fast UTF-8 validation with Range algorithm (NEON+SSE4+AVX2)
+Status: purge ok not-installed

@@ -4,8 +4,8 @@
 #ifndef OPENCV_OBJDETECT_ARUCO_DETECTOR_HPP
 #define OPENCV_OBJDETECT_ARUCO_DETECTOR_HPP
 
-#include <opencv4/opencv2/objdetect/aruco_dictionary.hpp>
-#include <opencv4/opencv2/objdetect/aruco_board.hpp>
+#include <opencv2/objdetect/aruco_dictionary.hpp>
+#include <opencv2/objdetect/aruco_board.hpp>
 
 namespace cv {
 namespace aruco {

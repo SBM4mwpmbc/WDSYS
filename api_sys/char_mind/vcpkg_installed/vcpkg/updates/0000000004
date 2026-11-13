@@ -1,0 +1,8 @@
+Package: tesseract
+Version: 5.5.3
+Depends: curl, leptonica, libarchive, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1fdad8f3160008eaee1ef5e1b07a888a303501a9e1201a89c4e43cee9f4524ea
+Description: An OCR Engine that was developed at HP Labs between 1985 and 1995... and now at Google.
+Status: purge ok half-installed

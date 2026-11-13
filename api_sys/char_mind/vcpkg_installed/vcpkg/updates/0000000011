@@ -1,0 +1,8 @@
+Package: openjpeg
+Version: 2.5.4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fce4cc8d57f037bf68a9a417777ca1e3e0337ef3a60cb37ef94a9ba7d94fa9b0
+Description: OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.
+Status: purge ok not-installed

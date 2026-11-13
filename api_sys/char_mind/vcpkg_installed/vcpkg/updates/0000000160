@@ -1,0 +1,9 @@
+Package: cpp-httplib
+Version: 0.63.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a77d91ca560a459742ca2033683c3cbcbde006fae16d64339245224e47f9d132
+Description: A single file C++11 header-only HTTP/HTTPS server and client library
+Default-Features: brotli
+Status: install ok installed

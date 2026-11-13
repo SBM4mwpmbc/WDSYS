@@ -1,0 +1,6 @@
+Package: libarchive
+Feature: xar
+Architecture: x64-windows
+Multi-Arch: same
+Description: Xar support
+Status: purge ok not-installed

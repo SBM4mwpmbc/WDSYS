@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: fs
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable filesystem support
+Status: install ok half-installed

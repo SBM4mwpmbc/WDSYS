@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-gfortran-x64-windows-3#3-991c682f-950f-4d4e-9e6e-217d00fc24e4",
-  "name": "vcpkg-gfortran:x64-windows@3#3 7696071de3fb6928ebec8780ac39a5149b7eb247fcda3f32d5bffcf15c6ec38a",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-gfortran-x64-windows-3#3-9c566a88-dfc5-4c10-90fe-94ac71a9b580",
+  "name": "vcpkg-gfortran:x64-windows@3#3 b66f8d3e1a59cec4a1519c51e0b8860b68a1bc93a87adc3974208403a4576d61",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-11-01T19:20:46Z"
+    "created": "2026-11-11T17:26:48Z"
   },
   "relationships": [
     {
@@ -221,56 +221,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-37"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-38"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-39"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-40"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-41"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-42"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-43"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-44"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-45"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-46"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-47"
     }
   ],
   "packages": [
@@ -278,7 +228,7 @@
       "name": "vcpkg-gfortran",
       "SPDXID": "SPDXRef-port",
       "versionInfo": "3#3",
-      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/vcpkg-gfortran",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@1af46bd54a9156a9f24fc7c8715488699522b382",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
@@ -288,14 +238,19 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:vcpkg/vcpkg-gfortran@3?port_version=3&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fvcpkg-gfortran"
+          "referenceLocator": "pkg:vcpkg/vcpkg-gfortran@3?port_version=3&triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvcpkg%401af46bd54a9156a9f24fc7c8715488699522b382"
+        },
+        {
+          "referenceCategory": "PERSISTENT-ID",
+          "referenceType": "gitoid",
+          "referenceLocator": "gitoid:tree:sha1:1af46bd54a9156a9f24fc7c8715488699522b382"
         }
       ]
     },
     {
       "name": "vcpkg-gfortran:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "7696071de3fb6928ebec8780ac39a5149b7eb247fcda3f32d5bffcf15c6ec38a",
+      "versionInfo": "b66f8d3e1a59cec4a1519c51e0b8860b68a1bc93a87adc3974208403a4576d61",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -334,7 +289,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d7e343dd266747177c3699bc3201ea36eceef158e98530e089263bc55bb2a6d7"
+          "checksumValue": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -346,7 +301,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b4ab3b29b2ce40e9b93fea4521ca9c35c563600f46e3c01c9b7dcb1cc9263186"
+          "checksumValue": "780fa163c1f76f75e36171a3da4e80806fd45286fd8bb9eae66cdfcfff5aff4d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -358,7 +313,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "658927a823ee98fd65287719586c4c1f68fad5b10d15b6ea86effb99f0d6e739"
+          "checksumValue": "01e0d4de6a6d718968a7e86c4b95972ae1dd00ab35fa43988dae56d1c20d9236"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -370,7 +325,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "72bf8802de3a99d28f0bc2db9a11f281a9f9f3fa83dab2bc67e69fac3bd3d9c0"
+          "checksumValue": "bbbb08e98392ba548f0d9435b69ed79e4a660268f7312b0c684bd11bff774733"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -394,7 +349,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d7e343dd266747177c3699bc3201ea36eceef158e98530e089263bc55bb2a6d7"
+          "checksumValue": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -406,7 +361,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b4ab3b29b2ce40e9b93fea4521ca9c35c563600f46e3c01c9b7dcb1cc9263186"
+          "checksumValue": "780fa163c1f76f75e36171a3da4e80806fd45286fd8bb9eae66cdfcfff5aff4d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -418,7 +373,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "658927a823ee98fd65287719586c4c1f68fad5b10d15b6ea86effb99f0d6e739"
+          "checksumValue": "01e0d4de6a6d718968a7e86c4b95972ae1dd00ab35fa43988dae56d1c20d9236"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -430,7 +385,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "72bf8802de3a99d28f0bc2db9a11f281a9f9f3fa83dab2bc67e69fac3bd3d9c0"
+          "checksumValue": "bbbb08e98392ba548f0d9435b69ed79e4a660268f7312b0c684bd11bff774733"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -533,7 +488,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/gcc/COPYING.RUNTIME",
+      "fileName": "./share/vcpkg-gfortran/licenses/gcc-libgfortran/COPYING.RUNTIME",
       "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
@@ -545,19 +500,19 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/gcc/COPYING3",
+      "fileName": "./share/vcpkg-gfortran/licenses/gcc-libs/COPYING.LIB",
       "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+          "checksumValue": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/gcc-fortran/COPYING.RUNTIME",
+      "fileName": "./share/vcpkg-gfortran/licenses/gcc-libs/COPYING.RUNTIME",
       "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
@@ -569,7 +524,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/gcc-fortran/COPYING3",
+      "fileName": "./share/vcpkg-gfortran/licenses/gcc-libs/COPYING3",
       "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
@@ -581,8 +536,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/gettext-runtime/COPYING",
+      "fileName": "./share/vcpkg-gfortran/licenses/gcc-libs/README",
       "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "33400d067fa3e2bd670a0868dcdb60c9486e8f559b675cf9ff1ff55d4e0d06ab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/vcpkg-gfortran/licenses/gettext-runtime/COPYING",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -594,7 +561,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/gettext-runtime/intl/COPYING.LIB",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -606,7 +573,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/gettext-runtime/libasprintf/COPYING",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -618,7 +585,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/gettext-runtime/libasprintf/COPYING.LIB",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -630,7 +597,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/headers/COPYING",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -642,7 +609,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/headers/COPYING.MinGW-w64-runtime.txt",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -654,7 +621,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/headers/COPYING.MinGW-w64.txt",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -666,30 +633,18 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/headers/ddk-readme.txt",
-      "SPDXID": "SPDXRef-binary-file-28",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8d8f9924e4ea5466932000bdb9a4104da1d8ca3e4c979bb8207225522ba63826"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libatomic/COPYING.RUNTIME",
       "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+          "checksumValue": "fdb6018009cec99085041e4fd1f13db7b82852e9aa73012d0cc7da6449b94f13"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/libatomic/COPYING3",
+      "fileName": "./share/vcpkg-gfortran/licenses/libiconv/COPYING",
       "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
@@ -701,92 +656,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgcc/COPYING.RUNTIME",
-      "SPDXID": "SPDXRef-binary-file-31",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgcc/COPYING3",
-      "SPDXID": "SPDXRef-binary-file-32",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgfortran/COPYING.RUNTIME",
-      "SPDXID": "SPDXRef-binary-file-33",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgfortran/COPYING3",
-      "SPDXID": "SPDXRef-binary-file-34",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgomp/COPYING.RUNTIME",
-      "SPDXID": "SPDXRef-binary-file-35",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libgomp/COPYING3",
-      "SPDXID": "SPDXRef-binary-file-36",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libiconv/COPYING",
-      "SPDXID": "SPDXRef-binary-file-37",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/vcpkg-gfortran/licenses/libiconv/COPYING.LIB",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -798,7 +669,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/libiconv/libcharset/COPYING.LIB",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -810,47 +681,11 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/libiconv/README",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4ae66e61d1c6593c84c47105b368d579bcee1af566dbb959ec63a0c48425dcf4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libquadmath/COPYING.LIB",
-      "SPDXID": "SPDXRef-binary-file-41",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libstdc++/COPYING.RUNTIME",
-      "SPDXID": "SPDXRef-binary-file-42",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/vcpkg-gfortran/licenses/libstdc++/COPYING3",
-      "SPDXID": "SPDXRef-binary-file-43",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+          "checksumValue": "af8ad19711aa967803d84ee59202eb089905619b014834f11eba1d581961c386"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -858,7 +693,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/libwinpthread/COPYING",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -870,7 +705,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/winpthreads/COPYING",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -882,11 +717,11 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/zlib/LICENSE",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+          "checksumValue": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -894,7 +729,7 @@
     },
     {
       "fileName": "./share/vcpkg-gfortran/licenses/zstd/LICENSE",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",

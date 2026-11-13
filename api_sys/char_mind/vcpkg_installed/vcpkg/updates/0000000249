@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: thread
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable thread support
+Status: install ok half-installed

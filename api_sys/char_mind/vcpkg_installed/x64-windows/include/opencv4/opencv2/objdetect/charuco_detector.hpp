@@ -4,7 +4,7 @@
 #ifndef OPENCV_OBJDETECT_CHARUCO_DETECTOR_HPP
 #define OPENCV_OBJDETECT_CHARUCO_DETECTOR_HPP
 
-#include "opencv4/opencv2/objdetect/aruco_detector.hpp"
+#include "opencv2/objdetect/aruco_detector.hpp"
 
 namespace cv {
 namespace aruco {

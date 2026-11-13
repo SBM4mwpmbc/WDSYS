@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/flatbuffers-x64-windows-25.12.19-1798e1e1-466b-4cf1-966a-51dac69ca591",
-  "name": "flatbuffers:x64-windows@25.12.19 6833586f50e13841bdc83cd98e01711ed16bb474810627d71a85df4ec94b24fa",
+  "documentNamespace": "https://spdx.org/spdxdocs/flatbuffers-x64-windows-25.12.19-94ba625e-b006-44d5-a01e-8e2e973be112",
+  "name": "flatbuffers:x64-windows@25.12.19 cb84cc61940ee8eb9288afa9f71d8ca067413c8a5de1445dc7b341bcf133ebde",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-11-07T17:22:45Z"
+    "created": "2026-11-11T17:45:18Z"
   },
   "relationships": [
     {
@@ -301,7 +301,7 @@
     {
       "name": "flatbuffers:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6833586f50e13841bdc83cd98e01711ed16bb474810627d71a85df4ec94b24fa",
+      "versionInfo": "cb84cc61940ee8eb9288afa9f71d8ca067413c8a5de1445dc7b341bcf133ebde",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -390,7 +390,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "98beab35fcc42eb52173484bca7c2653b8cade74fc25f507d1f73a30a45a290d"
+          "checksumValue": "d3a922dece0cc8ea1621c40120983885dea21f8633e0876187dfeea786beeef6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -774,7 +774,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3c3b5a3425c11ca48da8b2c11e415acca998a8ee76ecc3b6b95f42c19c7e418a"
+          "checksumValue": "772e607f0aa912edea01e2d0e3019c43cf14a30a27fac67d15e0cc7ff2609994"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -918,7 +918,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bac600c5324b07f14888e2a2a5cbff100f88dd16bd9793271400b57d65f7aa19"
+          "checksumValue": "52c4bd05a96365541256c7a92c7f06d4ed604e99f7272b1df36d529cf53fd624"
         }
       ],
       "licenseConcluded": "NOASSERTION",

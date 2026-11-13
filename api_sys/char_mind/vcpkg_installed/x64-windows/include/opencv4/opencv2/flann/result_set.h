@@ -40,8 +40,8 @@
 #include <set>
 #include <vector>
 
-#include "opencv4/opencv2/core/base.hpp"
-#include "opencv4/opencv2/core/cvdef.h"
+#include "opencv2/core/base.hpp"
+#include "opencv2/core/cvdef.h"
 
 namespace cvflann
 {

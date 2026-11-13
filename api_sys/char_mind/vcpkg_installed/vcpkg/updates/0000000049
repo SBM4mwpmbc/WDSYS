@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: intrinsics
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable intrinsics
+Status: purge ok half-installed

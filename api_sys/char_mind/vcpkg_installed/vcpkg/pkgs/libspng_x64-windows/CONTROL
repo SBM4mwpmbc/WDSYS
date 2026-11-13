@@ -1,0 +1,8 @@
+Package: libspng
+Version: 0.7.4
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 00b13b21dc3922b4684979e3edaf79bcfd6b9f0b25f8a41dc1c0f7e0bf46a2bf
+Description: Simple, modern libpng alternative

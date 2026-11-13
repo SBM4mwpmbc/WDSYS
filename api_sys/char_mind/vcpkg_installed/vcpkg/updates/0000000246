@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: msmf
+Architecture: x64-windows
+Multi-Arch: same
+Description: Microsoft Media Foundation support for opencv
+Status: install ok half-installed

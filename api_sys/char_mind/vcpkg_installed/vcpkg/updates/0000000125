@@ -1,0 +1,9 @@
+Package: blas
+Version: 2023-04-14
+Port-Version: 6
+Depends: openblas, vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 96ac88922e673eddc2619725c815ff09c1bb29783c2d6aacb3e8ab4abe61982b
+Description: Metapackage for packages which provide BLAS
+Status: purge ok not-installed

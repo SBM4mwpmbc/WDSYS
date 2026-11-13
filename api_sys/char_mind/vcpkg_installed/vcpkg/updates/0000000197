@@ -1,0 +1,7 @@
+Package: dlib
+Feature: fftw3
+Depends: fftw3
+Architecture: x64-windows
+Multi-Arch: same
+Description: fftw3 support for dlib
+Status: install ok half-installed

@@ -1,0 +1,10 @@
+Package: dlib
+Version: 20.0.1
+Port-Version: 3
+Depends: blas, lapack, libjpeg-turbo, libpng, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 176aa12b01716c88c652e5f785cf96713d7ae1f56c2636c09987e4206487452b
+Description: Modern C++ toolkit containing machine learning algorithms and tools for creating complex software in C++
+Default-Features: fftw3, sqlite3
+Status: install ok half-installed

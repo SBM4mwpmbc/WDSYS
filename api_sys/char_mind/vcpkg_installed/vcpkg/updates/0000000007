@@ -1,0 +1,8 @@
+Package: leptonica
+Version: 1.87.0
+Depends: giflib, libjpeg-turbo, libpng, libwebp, openjpeg, tiff, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2f44ecb8abdfe6798a557ce46ff11e846c453712dbed7718b76b63e7c47925c6
+Description: An open source library containing software that is broadly useful for image processing and image analysis applications
+Status: purge ok not-installed

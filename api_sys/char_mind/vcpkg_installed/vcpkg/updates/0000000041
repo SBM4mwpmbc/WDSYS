@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: win32ui
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable win32ui
+Status: purge ok half-installed

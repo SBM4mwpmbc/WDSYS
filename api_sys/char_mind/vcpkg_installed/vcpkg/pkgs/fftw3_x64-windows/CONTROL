@@ -1,0 +1,7 @@
+Package: fftw3
+Version: 3.3.11
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0792c9825ee1b0ee899a28f44ef994698a9413f63c58466d1cd498a783f7b00e
+Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST).

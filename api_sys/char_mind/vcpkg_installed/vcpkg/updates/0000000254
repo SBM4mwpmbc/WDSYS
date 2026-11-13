@@ -1,0 +1,6 @@
+Package: opencv4
+Feature: calib3d
+Architecture: x64-windows
+Multi-Arch: same
+Description: calib3d module
+Status: install ok installed

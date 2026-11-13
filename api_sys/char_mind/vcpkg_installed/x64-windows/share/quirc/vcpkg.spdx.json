@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/quirc-x64-windows-1.2-84897b37-1ecf-44ae-9099-633af673e30a",
-  "name": "quirc:x64-windows@1.2 335e6be5694579634668806d78b0e84f8bbd4737ad80a9b42688c4bae2a9e5e6",
+  "documentNamespace": "https://spdx.org/spdxdocs/quirc-x64-windows-1.2-68d66b2e-c284-43bf-ba7d-f4d4b0c981f1",
+  "name": "quirc:x64-windows@1.2 62c1665c98f8f21f175ec15e6fd4418513a190f5dca85b21a93afddf7fd40215",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b"
+      "Tool: vcpkg-2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8"
     ],
-    "created": "2026-11-07T17:13:41Z"
+    "created": "2026-11-11T17:34:34Z"
   },
   "relationships": [
     {
@@ -111,7 +111,7 @@
     {
       "name": "quirc:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "335e6be5694579634668806d78b0e84f8bbd4737ad80a9b42688c4bae2a9e5e6",
+      "versionInfo": "62c1665c98f8f21f175ec15e6fd4418513a190f5dca85b21a93afddf7fd40215",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -188,7 +188,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9c88e4a194a00d38191d75c4a6ddab6fb9b2cb3021fbbb837557f63c9ed725f5"
+          "checksumValue": "62b607617f0267d566ca170115afc048d9910c8f3dfa9ddad1a9f2e25aec1f70"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -212,7 +212,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "68da2031df3c2b0be973ae7229c05f94b3b7a308a110b0aa993706e5ce8572a4"
+          "checksumValue": "7806c1cbd2492b29bf12ef22e8f43862475eed44386a6b76b47a724af8832e74"
         }
       ],
       "licenseConcluded": "NOASSERTION",

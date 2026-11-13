@@ -48,7 +48,7 @@
 #  error cuda.hpp header must be compiled as C++
 #endif
 
-#include "opencv4/opencv2/core.hpp"
+#include "opencv2/core.hpp"
 #include "opencv2/core/cuda_types.hpp"
 
 /**
