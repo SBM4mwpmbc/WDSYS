@@ -114,31 +114,36 @@ Welcome to the Worker Drone System Version 1, a somewhat replica of the Worker D
 
 # Before you begin
 
+> [!Important]
+> PLEASE READ BEFORE USING YOUR WORKER DRONE.
+
 # Important Safety Information
-> [!Important]PLEASE READ BEFORE USING YOUR WORKER DRONE.
-Your Worker Drone is a complex electromechanical system containing batteries, motors, computers, moving parts, cameras, speakers, and other hardware. Improper use, modification, or maintenance may result in damage to the Worker Drone, surrounding property, or injury.
-General Safety
-Read this manual before operating the Worker Drone.
-Keep hands, hair, and other objects away from moving joints, motors, and mechanisms.
-Do not operate the Worker Drone near water unless the specific component is designed for it.
-Do not attempt to open, repair, or modify internal hardware unless you are qualified and the procedure is approved by WDSYS.
-Keep the Worker Drone away from extreme heat, flames, and other sources of excessive temperature.
-Only use the specified charging equipment and charging procedures.
-Stop using the Worker Drone immediately if you notice smoke, unusual heat, burning smells, damaged wiring, swelling batteries, sparks, or other abnormal behavior. pg. 10
-Do not continue operating a damaged Worker Drone.
-Keep the Worker Drone in a safe area while testing software or hardware changes.
-Battery Safety
-The Worker Drone contains a high-energy battery system. Improper charging, damage, or modification can create a fire or other serious hazard.
-Never puncture, crush, disassemble, short-circuit, or intentionally damage the battery
-If the battery becomes unusually hot, swollen, damaged, or begins producing smoke or an unusual smell, stop using the Worker Drone and move away from it. Follow the emergency procedures in this manual.
-Software & Modifications
-Only install software intended for your Worker Drone.
-Do not install random operating systems, drivers, firmware, or software onto the Worker Drone unless they are known to be compatible with its hardware.
-WDSYS is designed for its intended Worker Drone hardware. Do not install WDSYS on a normal computer.
-And remember:
-If your Worker Drone starts doing something it absolutely should not be doing, turn it off before asking why.
-Seriously. Don't screw around with a drone
-Warranty and responsibility
-	Warranty: The Worker Drone comes with a 5 year plan. 	
-	As a warranty member, you get: 30% discount for
-	replacement parts, extended support, etc.
+- Your Worker Drone is a complex electrical mechanical system containing batteries, motors, computers, moving parts, cameras, speakers, and other hardware. Improper use, modification, or maintenance may result in damage to the Worker Drone, surrounding property, or injury.
+
+# General Safety
+- Read this manual before operating the Worker Drone.
+- Keep hands, hair, and other objects away from moving joints, motors, and mechanisms.
+- Do not operate the Worker Drone near water unless the specific component is designed for it.
+- Do not attempt to open, repair, or modify internal hardware unless you know what you are doing. If you mess up, it may be expensive.
+- Keep the Worker Drone away from extreme heat, flames, and other sources of excessive temperature.
+- Only use the specified charging equipment and charging procedures.
+- Stop using the Worker Drone immediately if you notice smoke, unusual heat, burning smells, damaged wiring, swelling batteries, sparks, or other abnormal behavior. pg. 10
+- Do not continue operating a damaged Worker Drone.
+- Keep the Worker Drone in a safe area while testing software or hardware changes.
+
+# Battery Safety
+
+- The Worker Drone contains a high-energy battery system. Improper charging, damage, or modification can create a fire or other serious hazard.
+> [!CAUTION]
+> Never puncture, crush, disassemble, short-circuit, or intentionally damage the battery.
+> If the battery becomes unusually hot, swollen, damaged, or begins producing smoke or an unusual smell, stop using the Worker Drone and move away from it. Follow the emergency procedures in this manual.
+# Software & Modifications
+- Only install software intended for your Worker Drone.
+- Do not install random operating systems, drivers, firmware, or software onto the Worker Drone unless they are known to be compatible with its hardware.
+- WDSYS is designed for its intended Worker Drone hardware. Do not install WDSYS on a normal computer (unless you are on a throwaway computer, or on a VM for testing.)
+- And remember: If your Worker Drone starts doing something it absolutely should not be doing, turn it off before asking why. Seriously. Don't screw around with a drone.
+# Warranty and responsibility
+- Warranty: The Worker Drone comes with a 5 year plan.
+- Responsibility: The WDSYS team is not responsible for any weird ahh experiments you do, etc.
+
+# Getting to know your worker drone
