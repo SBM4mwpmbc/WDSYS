@@ -6,6 +6,7 @@ This is an Operating System based on Linux, that I decided to make.
 It's based on Murder Drones, and I'm trying to make a Murder Drone in real life. Yes, I did try to make my own kernel, but it was terrible. So I made it linux based.
 
 The /init does NOT link to the userspace yet, all there is, is a debug userspace printer. I'm working on that. Remember that.
+Also, before compiling, read the README.md in system_wd/krnl/initramfs. It might save you for an error later.
 
 > [!IMPORTANT]
 > Do NOT install this on a normal computer. Install this on a VM (for testing), or install it on the Worker Drone on Amazon (which has not yet been released.)
