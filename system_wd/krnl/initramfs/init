@@ -1,17 +1,80 @@
 #!/bin/sh
 
 echo
-echo "[WDSYS] Worker Drone System"
-echo "[WDSYS] Linux kernel initialized"
-echo "[WDSYS] Starting WDSYS userspace..."
+echo "[WDSYS /init] Worker Drone System"
+echo "[WDSYS /init] Linux kernel initialized"
+echo "[WDSYS /init] Starting WDSYS userspace..."
+echo
+
+echo
+echo "[WDSYS /init] Mounting directories.."
 echo
 
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t devtmpfs devtmpfs /dev
+mkdir -p /dev/pts /dev/shm /run /tmp /var/lib/dbus /run/dbus
+mount -t devpts devpts /dev/pts
+mount -t tmpfs tmpfs /dev/shm
+mount -t tmpfs tmpfs /run
+mount -t tmpfs tmpfs /tmp
+chmod 1777 /dev/shm /tmp
 
-echo "[WDSYS] Userspace initialized"
-echo "[WDSYS] WDSYS boot successful"
+echo
+echo "[WDSYS /init] Bringing up loopback interface.."
+echo
+
+ip link set lo up
+
+echo
+echo "[WDSYS /init] Loading M.2 cell kernel drivers (PCIe/MHI modes with USB 3.0)
+echo
+
+depmod -a 2>/dev/null
+for mod in option usb_wwan qmi_wwan cdc_mbim cdc_ncm mhi_bus mhi_pci_generic mhi_wwan_ctrl mhi_wwan_mbim iosm; do
+	modprobe "$mod" 2>dev/null
+done
+
+echo
+echo "[WDSYS /init] Starting udev for M.2 nodes appearance.."
+echo
+
+/lib/systemd/systemd-udevd --daemon
+udevadm trigger --action=add
+udevadm settle --timeout=10
+
+echo
+echo "[WDSYS /init] Starting Dbus sysbus.."
+echo
+
+mkdir -p /run/dbus
+dbus-uuidgen --ensure=/etc/machine-id
+dbus-uuidgen --ensure=/var/lib/dbus/machine-id
+dbus-daemon --system --fork
+
+echo
+echo "[WDSYS /init] Starting Modem and Network Manager.."
+echo
+
+/usr/sbin/ModemManager &
+sleep 2
+/usr/sbin/NetworkManager &
+
+echo
+echo "[WDSYS /init] Exporting WINE pkg enviro vars.."
+echo
+
+export HOME=/root
+export USER=root
+export WINEPREFIX=/root/.wine
+export WINEARCH=win32
+
+echo
+echo "[WDSYS /init] Forwarding procedures to wdinithost..."
+echo
+
+echo "[WDSYS /init] Userspace initialized"
+echo "[WDSYS /init] WDSYS boot successful"
 echo
 
 exec /bin/sh
