@@ -6,11 +6,11 @@ This WDSYS policy will explain the securites of this software.
 
 WDSYS is always in development.
 
-**WDSYS V3** Not yet released
-**WDSYS V2** Not yet released
-**WDSYS V1** Not yet released
-**WDSYS Beta and Alpha** In support until **July 2027.**
-**WDSYS Early Development** In support until **January 2027.**
+- **WDSYS V3** Not yet released
+- **WDSYS V2** Not yet released
+- **WDSYS V1** Not yet released
+- **WDSYS Beta and Alpha** In support until **July 2027.**
+- **WDSYS Early Development** In support until **January 2027.**
 
 ## Reporting vulnerablitiles.
 
@@ -24,25 +24,25 @@ Do not disclose any privates NNIDs, passwords, or APIs.
 
 Security reports may concern:
 
-Linux boot and initialization.
+- Linux boot and initialization.
 
-wdinithost.exe and service-launching logic.
+- wdinithost.exe and service-launching logic.
 
-Wine-launched WDSYS services.
+- Wine-launched WDSYS services.
 
-Authentication, authorization, and session management.
+- Authentication, authorization, and session management.
 
-AI API requests, response handling, and credential storage.
+- AI API requests, response handling, and credential storage.
 
-Camera, microphone, and other sensor permissions.
+- Camera, microphone, and other sensor permissions.
 
-GUI and terminal command handling.
+- GUI and terminal command handling.
 
-Update mechanisms, configuration files, and persistent state.
+- Update mechanisms, configuration files, and persistent state.
 
-Future hardware interfaces and physical robot-control components.
+- Future hardware interfaces and physical robot-control components.
 
-Third party parts may have their own policies.
+- Third party parts may have their own policies.
 
 ## Project Status
 
