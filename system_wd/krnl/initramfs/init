@@ -67,7 +67,7 @@ echo
 export HOME=/root
 export USER=root
 export WINEPREFIX=/root/.wine
-export WINEARCH=win32
+export WINEARCH=win64
 
 echo
 echo "[WDSYS /init] Forwarding procedures to wdinithost..."
