@@ -1,8 +1,6 @@
-Worker Drone System (WDSYS) V1
+Worker Drone System (WDSYS) V1 by Fard Inc
 
 Officially made by Weird Ferb O'Fletynn
-
-For official models, please contact Ferb if you wish to use a different model.
 
 COPYRIGHT WDSYS V1, all rights reserved.
 
@@ -16,15 +14,15 @@ logo of WDSYS officially made and designed by Weird Ferb O'Fletynn
 
 Special thanks:
 
-imaninjapacker
+imaninjapacker on Roblox
 Linus Torvalds
 Liam Vickers
 Luke Lerdwichagul
 Kevin Lerdwichagul
 Fard Inc.
-Meme War Productions & Meme Broadcasting Company
-ImDaGoatCreates
-Death Templer
+ImDaGoatCreates on GitHub
+Death Templer on Youtube
+mjbots on GitHub
 
 And several other close friends from Ferb's school.
 
@@ -37,7 +35,7 @@ C++
 Fardgramming-
 Rust
 
-WDSYS is protected under MWP & MBC Terms of use and policies, and Fard Inc. Usages
+WDSYS is protected under Fard Inc's "bigahh Fard policy"
 
 Idea from GLITCH and Liam Vickers
 
